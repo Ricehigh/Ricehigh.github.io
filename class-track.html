@@ -85,8 +85,13 @@ a{color:var(--acc)}
   nav::-webkit-scrollbar{display:none}
   .card{padding:14px 13px;margin:12px 0;border-radius:14px}
   h2{font-size:15.5px}
-  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px;max-width:100%}
-  th,td{padding:6px 7px;word-break:break-word;min-width:0}
+  table{font-size:12.5px}
+  th,td{padding:6px 7px;min-width:0}
+  th:first-child,td:first-child{min-width:4.5em}
+  .tscroll{margin:8px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .tscroll table{min-width:340px}
+  .tscroll.w4 table{min-width:540px}
+  .tscroll.w6 table{min-width:680px}
   ul{padding-left:18px}
   li{font-size:13.5px}
   img{max-width:100%;height:auto}
@@ -110,7 +115,7 @@ a{color:var(--acc)}
 <p><b>总闸门是身份线：</b>单程证批出前无法注册入学。三种进度情景的应对见本页下半部分——申请动作（递表/面试）不受身份限制，<b>只有"注册/留位"必须等批出</b>。</p></div>
 
 <div class="card"><h2>2027 年 9 月入园 · 逐校班别判断（case by case）</h2>
-<table>
+<div class="tscroll w4"><table>
 <tr><th>学校</th><th>2027 可进班别</th><th>判断依据与备注</th></tr>
 <tr><td><b>ESF 英基</b></td><td>仅 K1</td><td>ESF 无 PN 班；K1 2027/28 = 2024 年出生 ✓（班内最小端，ESF 按出生年份招生，无弹性）</td></tr>
 <tr><td><b>CDNIS 加拿大国际</b></td><td>仅 Nursery（2 岁班）</td><td>Nursery 2027/28 = 2024.9.1–2025.12.31 出生，麦兜属<b>窗口最年长端</b>（幼儿评估中年龄大是优势）；3 岁班 EY1 要等 2028</td></tr>
@@ -133,27 +138,27 @@ a{color:var(--acc)}
 <tr><td><b>国际英文 SC</b></td><td>仅 K1</td><td>2027 ✓（未设 PN 口径，以校方核实）</td></tr>
 <tr><td><b>弘爵 Sear Rogers</b></td><td>幼稚园段 ✓</td><td>已评不合适（4.95 分），备查不入申请清单</td></tr>
 <tr><td><b>免费计划园</b></td><td>仅 K1</td><td>免费计划不含 PN；K1 年龄线 ✓（注册证前提）</td></tr>
-</table>
+</table></div>
 <p class="mut">口径：国际校按各自官网出生年月 cutoff（已在各单页标注）；私立园按 EDB 2027/28 K1 截止 2024.12.31 与 PN 通行年龄带。标注"都可"的学校，递表时需在报名表上选定班别——建议默认报 K1，PN 只作身份/适应情景的备选。</p></div>
 
 <div class="card"><h2>身份进度实况（2026-08-30 更新，以交接文件为准）</h2>
-<table>
+<div class="tscroll w4"><table>
 <tr><th>节点</th><th>时间</th><th>状态与要点</th></tr>
 <tr><td>《婚姻状况证明书（无婚姻记录证明）》</td><td>2026-08-30</td><td>✅ 婚姻登记处当场办结</td></tr>
 <tr><td>《登记事项证明书》</td><td>2026-08-30 屯门人事登记办事处递交 → <b>2026-10-06 取件</b>（25 个工作日）</td><td>⏳ 取件时<b>当场逐字核对</b>：姓名拼音／出生日期／身份证号／国籍（必须"中国"）／婚姻状况栏，有错当场重开；证明开出日起 <b>6 个月有效</b></td></tr>
 <tr><td>罗湖出入境提交单程证资料（夫妻团聚＋偕行子女，路径 A）</td><td>10 月中取件后尽快递</td><td>⏳ 在 6 个月有效期内提交；"回港付费资料（2 个月）"待窗口初审后办理</td></tr>
 <tr><td>审批</td><td>深圳侧 40 个工作日＋香港侧审批，<b>双边合计约 2–3 个月 → 预计 2026.12–2027.1 批出</b></td><td>⏳ 以受理回执为准；获批＝注销内地户口，不可逆，出发前家庭须达成共识</td></tr>
 <tr><td>麦兜永居核实（ROP145）</td><td>到港领居民身份证后</td><td>⏳ <b>核心待确认</b>：书面问入境处（enquiry@immd.gov.hk 首选留底）偕行子女到港后能否即交 ROP145；兜底为 7 年自然转永居（约 2033）</td></tr>
-</table>
+</table></div>
 <p><b>对照下方三情景：当前轨道 = 情景 A（2027.3 前批出），按双边 2–3 个月口径提前量约 1–2 个月，比单看深圳侧 40 个工作日要紧。</b>2026.9–11 的申请窗口照跑，不等身份；免费园注册证（约 2027.1 中央注册）压线可及，若审批偏慢须警惕滑向情景 B。上学本身不卡永居，香港居民身份即可注册——路径 A 落地不耽误任何入学窗口。</p></div>
 
 <div class="card"><h2>身份进度 × 三情景应对（动态调整规则）</h2>
-<table>
+<div class="tscroll w4"><table>
 <tr><th>情景</th><th>触发条件</th><th>动作调整</th></tr>
 <tr><td><b>A · 顺利</b></td><td>单程证 2027 年 3 月前批出</td><td>全选项开放：2027.9 正常入学，按总分排序选校注册；免费园注册证与中央注册（约 1 月）都能赶上</td></tr>
 <tr><td><b>B · 压线</b></td><td>2027 年 3–7 月批出</td><td>重心移向<b>全年滚动招生的学校</b>（IMS/Invictus/ICHK/NIS）——注册时间灵活；免费园过中央注册日后只能靠剩余学额，降级为纯兜底；已付的留位费按各校退款条款处理</td></tr>
 <tr><td><b>C · 延迟</b></td><td>2027.9 前未批出</td><td>整体推迟到 2028：国际校体系班别自然平移（ESF→K2、CDNIS→EY1、SIS→PY1 正好 2028，不受影响）；本地免费园 K1 2028 会超龄，只能 K2 插班或转私立——<b>届时免费线保底失效，私立双语/国际线成为主轨</b></td></tr>
-</table></div>
+</table></div></div>
 
 <div class="card"><h2>操作要点</h2>
 <ul>

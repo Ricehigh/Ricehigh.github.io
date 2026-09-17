@@ -85,8 +85,13 @@ a{color:var(--acc)}
   nav::-webkit-scrollbar{display:none}
   .card{padding:14px 13px;margin:12px 0;border-radius:14px}
   h2{font-size:15.5px}
-  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px;max-width:100%}
-  th,td{padding:6px 7px;word-break:break-word;min-width:0}
+  table{font-size:12.5px}
+  th,td{padding:6px 7px;min-width:0}
+  th:first-child,td:first-child{min-width:4.5em}
+  .tscroll{margin:8px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .tscroll table{min-width:340px}
+  .tscroll.w4 table{min-width:540px}
+  .tscroll.w6 table{min-width:680px}
   ul{padding-left:18px}
   li{font-size:13.5px}
   img{max-width:100%;height:auto}
@@ -110,17 +115,17 @@ a{color:var(--acc)}
 <p><b>可按需单买的只有一项：</b>面试前的 play session 陪练（如觉必要），按次付费即可。</p></div>
 
 <div class="card"><h2>三方对比</h2>
-<table>
+<div class="tscroll w4"><table>
 <tr><th style="width:22%"></th><th>Horizon / 娇姐</th><th>拔萃教育（小红书）</th><th>DIY（本报告路线）</th></tr>
 <tr><td><b>性质</b></td><td>香港本地教育机构，人在香港多年，正在执行郭董案</td><td>深港两地中介，2006 年前身"双非家庭服务社"，小红书获客，沙田石门＋深圳罗湖</td><td>家长自办</td></tr>
 <tr><td><b>报价</b></td><td>郭董案合同口径价（金额属内部纪律，不进文档；9＋6 课时）</td><td>RMB 58,800（约 6.4 万港元）双轨 12–14 校套餐；超校 +RMB 2,000/间</td><td>各校报名费合计约 3,000–5,000</td></tr>
 <tr><td><b>核心价值</b></td><td>香港本地校情、参观预约、带看、面试经验</td><td>打包流程代办＋20 小时 1 对 1 特训＋身份/生活服务</td><td>—</td></tr>
 <tr><td><b>对麦兜的适配度</b></td><td>关系现成、可小范围咨询；但其服务场景是"客户陪同"，自家 DIY 用不上全包</td><td>套餐为"12–14 校"设计——对 2 岁孩子是过度申请；核心卖点（文书、笔试特训）在幼稚园段用不上</td><td>完全可行：流程全是网申＋亲子面试</td></tr>
 <tr><td><b>风险点</b></td><td>—</td><td>"2000+ 案例、90% 第一志愿"等宣传数据无法验证，属广告口径；套餐包含的"简历/推荐信"服务在幼稚园申请中并不存在该环节，说明模板是中小学套用</td><td>需要你自己盯窗口（本报告行动日历已解决）</td></tr>
-</table></div>
+</table></div></div>
 
 <div class="card"><h2>逐项拆开看：中介卖的东西，幼稚园段真正需要的是哪些</h2>
-<table><tr><th>中介套餐内容</th><th>幼稚园段实际需要？</th></tr>
+<div class="tscroll"><table><tr><th>中介套餐内容</th><th>幼稚园段实际需要？</th></tr>
 <tr><td>学生水平评估＋评估报告</td><td>❌ 2 岁孩子做"学术评估"意义有限；发展里程碑儿科/playgroup 即可观察</td></tr>
 <tr><td>定制化择校方案（12–14 校）</td><td>❌ 你已有本报告（24 校多维调研＋10 间免费保底）；申请 12–14 所对幼儿是折腾</td></tr>
 <tr><td>简历制作/推荐信/文书翻译</td><td>❌ 幼稚园网申无此环节（该服务为中小学模板）</td></tr>
@@ -130,7 +135,7 @@ a{color:var(--acc)}
 <tr><td>预约参观/简介会</td><td>⚠️ 省心但非必需：各校开放日自行预约即可；娇姐可帮忙问</td></tr>
 <tr><td>录取后注册指导</td><td>❌ 学校会发详细指引</td></tr>
 <tr><td>身份续签/生活服务（拔萃）</td><td>❌ 你的单程证路径研究已深于一般中介；且中介管不了公安审批</td></tr>
-</table></div>
+</table></div></div>
 
 <div class="card"><h2>什么情况下值得重新考虑中介</h2>
 <ul>

@@ -85,8 +85,13 @@ a{color:var(--acc)}
   nav::-webkit-scrollbar{display:none}
   .card{padding:14px 13px;margin:12px 0;border-radius:14px}
   h2{font-size:15.5px}
-  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px;max-width:100%}
-  th,td{padding:6px 7px;word-break:break-word;min-width:0}
+  table{font-size:12.5px}
+  th,td{padding:6px 7px;min-width:0}
+  th:first-child,td:first-child{min-width:4.5em}
+  .tscroll{margin:8px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .tscroll table{min-width:340px}
+  .tscroll.w4 table{min-width:540px}
+  .tscroll.w6 table{min-width:680px}
   ul{padding-left:18px}
   li{font-size:13.5px}
   img{max-width:100%;height:auto}
@@ -112,7 +117,7 @@ a{color:var(--acc)}
 <p><b>宗教口径（2026-08-28 更新）：</b>免费线教会办学普遍。按家庭"尽量不考虑宗教学校"口径，保底优先序：<b>启思马鞍山（非宗教办学团体）＞ 保良局系／青衣商会（非宗教）＞ 教会办学各园</b>（下表备注列已逐园标注）。</p></div>
 
 <div class="card"><h2>保底园名单（新界东，as-of 2026-08）</h2>
-<table>
+<div class="tscroll w4"><table>
 <tr><th>园所</th><th>地区</th><th>费用（全日班/年；半日持注册证免费）</th><th>备注</th></tr>
 <tr><td><b>启思幼稚园（马鞍山）</b></td><td>马鞍山</td><td>全日 45,200（2026/27，官网口径）</td><td><b>非宗教办学团体 ✓</b>；免费线中品牌最强；⚠️ 同区另有私营'启思中英文幼稚园（马鞍山）'（2025 新开，半日 61,200，<b>不参加</b>免费计划），报名时核对校名</td></tr>
 <tr><td>大埔礼贤会幼稚园（安富道）</td><td>大埔</td><td>全日 6,050</td><td>师生比约 1:8；质素评核通过；基督教礼贤会办学</td></tr>
@@ -125,15 +130,15 @@ a{color:var(--acc)}
 <tr><td>明爱沙田幼儿学校</td><td>沙田</td><td>半日免费/全日低收费</td><td>同上榜单；另收 2–3 岁幼儿；天主教明爱办学</td></tr>
 <tr><td>保良局刘进／邓碧云纪念</td><td>大埔</td><td>半日免费/全日低收费</td><td><b>非宗教（保良局办学）✓</b>；实地看过再排优先级</td></tr>
 <tr><td>大埔浸信会幼稚园</td><td>大埔</td><td>半日免费/全日低收费</td><td>基督教浸信会办学；名单级保底</td></tr>
-</table>
+</table></div>
 <p class="mut">费用为 2025/26 或 2026/27 学年口径（已逐行标注）；'榜单'指明报 2026 幼稚园入学攻略赵荣德推荐名单。全部以教育局当年收费证明书为准。</p></div>
 
 <div class="card"><h2>启用免费线的三步</h2>
-<table><tr><th>步骤</th><th>动作</th><th>时间</th></tr>
+<div class="tscroll w4"><table><tr><th>步骤</th><th>动作</th><th>时间</th></tr>
 <tr><td>1</td><td>向教育局申请'幼稚园入学注册证'（免费，须单程证/居留权已批）</td><td>2026.9–11</td></tr>
 <tr><td>2</td><td>从上表就近选 2–3 间递表（优先：启思马鞍山 → 大埔礼贤会/天主教大埔）</td><td>2026.9–11 各校窗口</td></tr>
 <tr><td>3</td><td>若录取并入读：课外配英语班/外教 playgroup 补足硬约束缺口；小一再战直资英文小学或转国际线</td><td>2027.9 起</td></tr>
-</table></div>
+</table></div></div>
 
 <div class="card"><h2>资料来源</h2><ul class="src">
 <li><a href="https://creative.edu.hk/mos/">启思（马鞍山）校页（免费计划口径）</a></li>

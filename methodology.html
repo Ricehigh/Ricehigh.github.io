@@ -85,8 +85,13 @@ a{color:var(--acc)}
   nav::-webkit-scrollbar{display:none}
   .card{padding:14px 13px;margin:12px 0;border-radius:14px}
   h2{font-size:15.5px}
-  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px;max-width:100%}
-  th,td{padding:6px 7px;word-break:break-word;min-width:0}
+  table{font-size:12.5px}
+  th,td{padding:6px 7px;min-width:0}
+  th:first-child,td:first-child{min-width:4.5em}
+  .tscroll{margin:8px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .tscroll table{min-width:340px}
+  .tscroll.w4 table{min-width:540px}
+  .tscroll.w6 table{min-width:680px}
   ul{padding-left:18px}
   li{font-size:13.5px}
   img{max-width:100%;height:auto}

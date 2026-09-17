@@ -85,8 +85,13 @@ a{color:var(--acc)}
   nav::-webkit-scrollbar{display:none}
   .card{padding:14px 13px;margin:12px 0;border-radius:14px}
   h2{font-size:15.5px}
-  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px;max-width:100%}
-  th,td{padding:6px 7px;word-break:break-word;min-width:0}
+  table{font-size:12.5px}
+  th,td{padding:6px 7px;min-width:0}
+  th:first-child,td:first-child{min-width:4.5em}
+  .tscroll{margin:8px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .tscroll table{min-width:340px}
+  .tscroll.w4 table{min-width:540px}
+  .tscroll.w6 table{min-width:680px}
   ul{padding-left:18px}
   li{font-size:13.5px}
   img{max-width:100%;height:auto}
@@ -114,7 +119,7 @@ a{color:var(--acc)}
 </ul></div>
 
 <div class="card"><h2>逐校班别全景：2027 进什么班 / 2028 进什么班</h2>
-<table>
+<div class="tscroll w4"><table>
 <tr><th>学校</th><th>2027.9 入园（2y11m）</th><th>2028.9 入园（3y11m）</th><th>备注</th></tr>
 <tr><td>ESF 英基</td><td>K1 ✓</td><td>K2 ✓（班别平移）</td><td>Y1 要等 2029</td></tr>
 <tr><td>CDNIS</td><td>Nursery ✓（窗口最年长端）</td><td>EY1（3 岁班）✓</td><td>两年都可，2027 入评估占优</td></tr>
@@ -138,10 +143,10 @@ a{color:var(--acc)}
 <tr><td><b>SIS 新加坡国际</b></td><td>不可入</td><td>PY1 ✓（原定路线）</td><td>校方书面 2026.9：2028/29 递表截止 2027.9.30、评估约 2027.12——旧"2026 年内递"口径作废</td></tr>
 <tr><td><b>哈罗香港</b></td><td>⚠️ 边界（K1 3 岁线，麦兜 2027.9.30 满 3 岁——cutoff 须向校方核实）</td><td>K2 ✓</td><td>英式寄宿传统；低龄段溢价主要在品牌</td></tr>
 <tr><td>Kellett 启历</td><td>不可入</td><td>不可入（8.31 前满 4 岁 → 2029）</td><td>仅作远期观察，不入名单</td></tr>
-</table></div>
+</table></div></div>
 
 <div class="card"><h2>质价比分析：贵的钱到底买到了什么</h2>
-<table>
+<div class="tscroll w4"><table>
 <tr><th>档位</th><th>学校（低龄段年费口径）</th><th>溢价买到什么</th><th>质价比判断</th></tr>
 <tr><td><b>质价比之王</b></td><td>ESF（10.7 万起＋一次性资本费 0.38–3.8 万）</td><td>全港最大校网＋IB 一贯＋K1 锁 Y1</td><td>★★★★★ 便宜是津贴与规模的结果，不是质量折扣</td></tr>
 <tr><td><b>质价比黑马</b></td><td>Invictus（7.5 万半日，无债券）／朗思（5.1–7.6 万，IB 链）／维多利亚 VEO（K1 半日 8.8 万起，2025/26）／剑鸣（约 6.4 万，IB 幼教）</td><td>一条龙确定性／IB 衔接链／VSA 优先录取／名幼圈 IB 幼教</td><td>★★★★☆ 用一半价格买八成功能；VEO 的 VSA 优先权是隐性价值</td></tr>
@@ -149,11 +154,11 @@ a{color:var(--acc)}
 <tr><td><b>贵但看理念认同</b></td><td>IMS 蒙特梭利（12.6–16.3 万＋提名权 7.5–10 万）</td><td>蒙特梭利理念稀缺性＋双母语同班＋港岛四校区弹性</td><td>★★★★ 理念维度满分，但一贯只到 14 岁——溢价买的是启蒙段，不是出口</td></tr>
 <tr><td><b>贵但看需求</b></td><td>哈罗（17.6 万起＋年建校费 6 万）／弘立 ISF（25.1 万起）</td><td>英式寄宿传统／武术游泳特色＋双语 IB</td><td>★★★ 值不值取决于是否真要那条路线，不为品牌付溢价；HKIS 9/8 宗教口径排除，不入此表</td></tr>
 <tr><td><b>便宜但目标不同</b></td><td>免费计划园（半日免费/全日数千）</td><td>政府买单的本地课程</td><td>不是"质量差"，是教学目标不同（粤语本地融入 vs 英语国际线）——所以只作兜底</td></tr>
-</table>
+</table></div>
 <p class="mut">一句话：<b>价格在香港国际学校市场主要买"衔接确定性＋圈子＋理念稀缺性"，不直接买教学质量。</b>教学质量的代理指标是 IB/AP 出口与师资流动率，与学费相关系数并不高（ESF 是最好反例）。</p></div>
 
 <div class="card"><h2>生源圈子（3 岁段的"圈子"= 同伴家庭网络＋语言同伴环境）</h2>
-<table>
+<div class="tscroll w4"><table>
 <tr><th>学校</th><th>生源组成</th><th>圈子特征</th></tr>
 <tr><td>CDNIS</td><td>约 90% 外国护照家庭</td><td>国际社区浓度全港最高；英语同伴环境最强</td></tr>
 <tr><td>CIS 汉基</td><td>中英双语精英家庭（政商学界）</td><td>中文圈最强；家庭网络含金量高</td></tr>
@@ -166,7 +171,7 @@ a{color:var(--acc)}
 <tr><td>维多利亚 VEO</td><td>名人子女与中产精英家庭集中（媒体报道口径）</td><td>名幼圈＋VSA 家长网络；社交压力因人而异</td></tr>
 <tr><td>Invictus / Box Hill</td><td>本地＋国际混合</td><td>新校圈子在形成期</td></tr>
 <tr><td>本地私立双语园</td><td>本地中产为主</td><td>升小战友网络（直资/私立面试同伴）</td></tr>
-</table>
+</table></div>
 <p class="mut">建议：圈子权重不超过总决策的 15%——3 岁孩子的同伴环境流动性大，且 15 年一贯制下圈子会自然沉淀；语言同伴环境（英语同伴比例）比家长网络更直接影响孩子。</p></div>
 
 <div class="card"><h2>预算放开后的更新建议（v2 排序已校准）</h2>

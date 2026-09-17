@@ -85,8 +85,13 @@ a{color:var(--acc)}
   nav::-webkit-scrollbar{display:none}
   .card{padding:14px 13px;margin:12px 0;border-radius:14px}
   h2{font-size:15.5px}
-  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px;max-width:100%}
-  th,td{padding:6px 7px;word-break:break-word;min-width:0}
+  table{font-size:12.5px}
+  th,td{padding:6px 7px;min-width:0}
+  th:first-child,td:first-child{min-width:4.5em}
+  .tscroll{margin:8px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .tscroll table{min-width:340px}
+  .tscroll.w4 table{min-width:540px}
+  .tscroll.w6 table{min-width:680px}
   ul{padding-left:18px}
   li{font-size:13.5px}
   img{max-width:100%;height:auto}
@@ -112,7 +117,7 @@ a{color:var(--acc)}
 界面退到辅助意识里，判断留在你手里。</p></div>
 
 <div class="card"><h2>六条原则如何落到这份报告</h2>
-<table>
+<div class="tscroll"><table>
 <tr><th>原则</th><th>在本报告的实现</th></tr>
 <tr><td><b>默会优先</b></td><td>打开总览 3 秒内可行动：hero 一句话给出"先申哪三所＋窗口时间"；学校卡片即按钮，无需阅读任何说明</td></tr>
 <tr><td><b>辅助意识</b></td><td>导航、图例、口径说明全部降对比度/折叠到二级页；首屏只有结论、筛选豆、卡片——注意力永远在学校上，不在界面上</td></tr>
@@ -120,7 +125,7 @@ a{color:var(--acc)}
 <tr><td><b>个人承诺</b></td><td>顶部"当前约束"令牌条（预算不限/宗教已移出/居住未定…）把你的家庭口径变成界面的可见状态——报告因你的选择而改变形状，是与Agent共同创作的证据</td></tr>
 <tr><td><b>零文字上手</b></td><td>筛选豆自带数量徽标、按下即变色、卡片随之增删——第一次点击发生在理解规则之前，就像用筷子</td></tr>
 <tr><td><b>动态反馈</b></td><td>卡片入场上浮、悬停抬升、筛选重排时的重播动画——让界面"感到"你的触碰</td></tr>
-</table></div>
+</table></div></div>
 
 <div class="card"><h2>Polanyi 悖论验证：为什么这个界面"懂"你</h2>
 <ul>

@@ -85,8 +85,13 @@ a{color:var(--acc)}
   nav::-webkit-scrollbar{display:none}
   .card{padding:14px 13px;margin:12px 0;border-radius:14px}
   h2{font-size:15.5px}
-  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px;max-width:100%}
-  th,td{padding:6px 7px;word-break:break-word;min-width:0}
+  table{font-size:12.5px}
+  th,td{padding:6px 7px;min-width:0}
+  th:first-child,td:first-child{min-width:4.5em}
+  .tscroll{margin:8px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .tscroll table{min-width:340px}
+  .tscroll.w4 table{min-width:540px}
+  .tscroll.w6 table{min-width:680px}
   ul{padding-left:18px}
   li{font-size:13.5px}
   img{max-width:100%;height:auto}
@@ -106,32 +111,32 @@ a{color:var(--acc)}
 <nav><a href="index.html">← 总览</a></nav>
 <div class="wrap">
 <div class="card"><h2>已转出本页（2026-08-28 预算放开后更新）</h2>
-<table>
+<div class="tscroll"><table>
 <tr><th>学校</th><th>去向</th></tr>
 <tr><td><b>Malvern 墨尔文</b></td><td>原排除理由仅为"超 20 万锚点"——预算放开后回归，<b>升入主力层</b>（现行评分 8.4，主力层第三），见单页与 <a href="year2028.html">2028 梯队页</a>的时间锁警告</td></tr>
 <tr><td><b>哈罗香港</b>／<b>CIS 汉基</b>／<b>德瑞 GSIS</b></td><td>2027 年龄不到线（K1 3 岁/Reception 4 岁）或按需求定——<b>转入 2028 梯队</b>，2027 年秋统一评估，见 <a href="year2028.html">2028 梯队页</a></td></tr>
 <tr><td><b>Kellett 启历</b></td><td>Reception 须 8.31 前满 4 岁 → 麦兜 2029 才可入，远期观察，不入名单</td></tr>
 <tr><td><b>ICS 基督教国际</b>／<b>NIS 挪威国际</b></td><td>基督教背景（ICS 招生偏好＋NIS 每周 chapel/圣经课）——按家庭口径"尽量不考虑宗教学校"移出名单（2026-08-28 更新）；单页保留备查</td></tr>
 <tr><td><b>HKIS 香港国际</b></td><td>基督教背景（路德会密苏里总会创办；R1–G6 每周 chapel＋宗教课，高中宗教课属毕业学分要求）——<b>2026-09-08 用户拍板排除</b>；叠加官方 cutoff（R1 须入学年 8.31 前满 4 岁，麦兜差 29 天、实为 2029/30 才可入）；9/8 用户实地参观浅水湾校区（Upper Primary G3–5；低龄段 R1–R2 在大潭校区）</td></tr>
-</table></div>
+</table></div></div>
 
 <div class="card"><h2>已回炉重评（v2 框架修正，2026-08-30）</h2>
 <p class="mut">以下学校原仅因地理被排除——居住地未定，地理不构成排除理由。五所已全部补齐深研单页与八维评分，回归主名单（点击进单页）：</p>
-<table>
+<div class="tscroll"><table>
 <tr><th>学校</th><th>重评结论</th></tr>
 <tr><td><b><a href="schools/ims.html">IMS 蒙特梭利</a></b></td><td>7.65 分（9/4 校舍复核后），<b>入第一梯队</b>——启蒙理念满分档；短板是一贯只到 14 岁、西湾河校区规模小（用户 9/3 实地验证）</td></tr>
 <tr><td><b><a href="schools/vic.html">维多利亚 VEO/VIC</a></b></td><td>7.8 分，<b>入第一梯队</b>——IB 双语名幼＋VSA 优先录取，9 校舍地理弹性最高</td></tr>
 <tr><td><b><a href="schools/kingston.html">剑鸣 Kingston</a></b></td><td>6.55 分，有条件合适——九龙塘落点情景选项，IB 幼教质价比高</td></tr>
 <tr><td><b><a href="schools/stcat.html">国际英文 St. Catherine's</a></b></td><td>6.6 分（9/4 校舍复核：双校舍 3.3 万呎上调），有条件合适——升小导向强但偏传统学术型；2027 窗口 8.28–9.8 临近关闭，9/5 申请批次未纳入（默认弃）</td></tr>
 <tr><td><b><a href="schools/searrogers.html">弘爵 Sear Rogers</a></b></td><td>4.95 分，维持不合适——口碑两极、软硬件有限（重评后结论不变，但已按统一框架评分备查）</td></tr>
-</table>
+</table></div>
 <p class="mut">LIS 大屿山国际维持排除（位置极偏且仅小学段，即使居住未定也不构成选项）。</p></div>
 
 <div class="card"><h2>维持排除（非地理原因，逐所说明）</h2>
-<table>
+<div class="tscroll"><table>
 <tr><th>学校</th><th>排除原因</th></tr>
 <tr><td><b>斯坦福美国学校</b>（何文田）</td><td>低龄段软硬件与出口记录不支持其价位；预算放开后仍未见匹配点</td></tr>
 <tr><td><b>FIS 法国国际</b>（将军澳等）</td><td>法语流为主与家庭语言规划不匹配；国际部 15.2–21.5 万偏贵</td></tr>
-</table>
+</table></div>
 <p class="mut">排除口径 v2：英语环境硬约束、2027/2028 年龄可入、家庭宗教口径（尽量不考虑）——三项均为教育目标直接相关项；预算与地理不作闸门。</p></div>
 </div></body></html>

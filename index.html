@@ -85,8 +85,13 @@ a{color:var(--acc)}
   nav::-webkit-scrollbar{display:none}
   .card{padding:14px 13px;margin:12px 0;border-radius:14px}
   h2{font-size:15.5px}
-  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px;max-width:100%}
-  th,td{padding:6px 7px;word-break:break-word;min-width:0}
+  table{font-size:12.5px}
+  th,td{padding:6px 7px;min-width:0}
+  th:first-child,td:first-child{min-width:4.5em}
+  .tscroll{margin:8px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .tscroll table{min-width:340px}
+  .tscroll.w4 table{min-width:540px}
+  .tscroll.w6 table{min-width:680px}
   ul{padding-left:18px}
   li{font-size:13.5px}
   img{max-width:100%;height:auto}
@@ -138,7 +143,7 @@ a{color:var(--acc)}
 
 <div class="card"><h2>💰 成本总账（2026/27 口径，万港元/首年）</h2>
 <img class="chart" src="assets/cost_bar.png" alt="首年成本对比">
-<table>
+<div class="tscroll w6"><table>
 <tr><th>学校（班别口径）</th><th>学费/年</th><th>一次性费用</th><th>每年附加</th><th>首年现金</th><th>可退占用</th></tr>
 <tr><td>学之园（K1 半日）</td><td>7.9–8.3 万</td><td>—</td><td>—</td><td><b>约 8.3 万</b></td><td>—</td></tr>
 <tr><td>VEO 维多利亚（K1 半日）</td><td>88,360</td><td>—</td><td>—</td><td><b>约 8.8 万</b></td><td>—</td></tr>
@@ -153,41 +158,41 @@ a{color:var(--acc)}
 <tr><td>HKA（Pre-K1）</td><td>约 11.9 万起</td><td>入学费 25,000＋报名 1,500</td><td>建校费 32,000</td><td><b>约 17.6 万</b></td><td>—（63 万家庭债券纯可选）</td></tr>
 <tr><td>CDNIS（Nursery）</td><td>142,780</td><td>入学费 12,500＋报名 2,350＋评估 1,650</td><td>资本费 43,000</td><td><b>约 20.2 万</b></td><td>按金 8 万（可退）</td></tr>
 <tr><td>弘立 ISF Pre-School（K1·已弃）</td><td>125,840</td><td>—</td><td>建校费 15,000（半日）</td><td><b>约 14.1 万</b></td><td>—（9/9 超预算线，2027 不递）</td></tr>
-</table>
+</table></div>
 <p class="mut">全日班口径：墨尔文 PN 全日约 25.1 万/年、ICHK Nursery 全日约 24 万/年（含建校费）。2028 路线参考：SIS 学费 106,100＋建校费 2 万/年＋债券 20 万（可赎回）。弘立 ISF Pre-School 费用待校方书面。口径来源：ESF/CDNIS/ICHK/思贝礼官网 2026/27、墨尔文 SOSOMAMA 2026、学之园/VEO 收费证明书口径；签约前以官网当年价目为准。</p>
 <p class="mut"><b>读法：</b>首年现金是"真花掉的钱"；阴影占用是债券/按金（退学可退、不计入成本）。ESF 是"便宜且强"，CDNIS/墨尔文的溢价买的是衔接确定性与理念，不为品牌本身付钱。</p></div>
 
 <div class="card"><h2>🏠 居住与搬迁决策（2026-09-09 新增）</h2>
-<table>
+<div class="tscroll"><table>
 <tr><th>项目</th><th>结论</th></tr>
 <tr><td><b>候选落点排序</b></td><td><b>大埔墟站沿线 ≥ 白石角 > 马鞍山</b>——东铁线一线串 3 个办公点＋罗湖口岸；非站上盖屋苑租金折让 25–30%（白石角 727 呎 3 房 2.38–2.5 万 vs 大围柏傲庄 682 呎 3.55 万）；候选学校在大埔/马鞍山形成集群（墨尔文主校/ICHK/Mulberry/学之园/ESF 乌溪沙/免费线兜底）</td></tr>
 <tr><td><b>决策规则</b></td><td>家庭单一现金流（内地收入不延续、太太暂无收入）：<b>收入 &lt;72 万/年留深圳</b>；72 万～税收平衡带之间搬家是消费选择；<b>过平衡带（六年规则触线时）搬家反而净省钱——平衡带 118–174 万/年随生活水平滑动，中等生活 ≈141 万</b>（9/11 三档模型，详见<a href="relocation.html">居住·税务测算页</a>）</td></tr>
 <tr><td><b>搬家双闸门</b></td><td>单程证批出（预计 2026.12–2027.1）＋ 滚动 3 个月收入 ≥5 万/月 → 2027 Q1–Q2 搬；先短租过渡 1–2 个月确认办公点权重再签长约；只签一年生约，2027 Q4 继续门验证前不签两年死约</td></tr>
 <tr><td><b>签约 upfront</b></td><td>两押一付＋半月佣金 ≈ <b>8.4 万</b>（大埔方案 2.4 万/月）；预缴可谈，目标压到 0–3 个月</td></tr>
 <tr><td><b>税务切换年</b></td><td>2027 自然年：全年内地 &lt;183 天＋经济利益中心移港；六年规则分支待回查 2019–2024 出入境记录后定</td></tr>
-</table>
+</table></div>
 <p class="mut">完整论证见工作区文件：08 居住成本与租房选址分析（电脑本地版）（租金市场核实、通勤矩阵、四方案测算）、09 深港搬迁税务与决策测算（电脑本地版）（183 天×六年规则、三档收入双边税负、三阶段 sequencing）。⚠️ 税务内容为框架性演算，转制年申报须请跨境税务专业人士。</p></div>
 
 <div class="card"><h2>🎯 2027 申请组合与行权闸门（2026-09-09 晚定）</h2>
 <p><b>总策略：广撒期权、延迟行权。</b>9–11 月把申请动作全部做完（申请费=小额期权费）；2027 Q1–Q2 offer 落地时按<b>当时收入轨迹 × 学费档位</b>行权（注册缴费=承诺性支出）；最终去向 = 录取结果 ∩ 收入验证 ∩ 参观主观分。学费预算三档线：默认 <b>≤9 万/年</b>；收入确认 ≥100 万/年放 12–13 万；≥155 万/年才进 15–20 万档。</p>
-<table>
+<div class="tscroll w4"><table>
 <tr><th>分层</th><th>学校</th><th>动作</th></tr>
 <tr><td><b>必递（≤9 万，任何情景可负担）</b></td><td>VEO（K1 10.26 17:00 硬死线＋PN 兜底）／学之园（10.16 截止）／Mulberry（主流 AM 班 11.2 万超线，守线选 PM 班 9.6 万或三日英文班 5.8 万）／<b>Box Hill</b>（新升首要：马鞍山全英沉浸、年费约 7.4–8.1 万、质价比 0.87 仅次 VEO）</td><td>9–10 月递完</td></tr>
 <tr><td><b>期权（小额申请费买选择权）</b></td><td>ESF（第一志愿建议押乌溪沙，9.30 截止）／墨尔文 PN（滚动先到先得，用户最爱①）／ICHK（全年滚动，用户最爱②）</td><td>行权挂收入闸门：ESF=B 档（≥5 万/月）；ICHK=年化 ≥100 万（首年建校费 7.5 万）；墨尔文=年化贴 155 万轨道</td></tr>
 <tr><td><b>放弃/缓办</b></td><td>CDNIS（11 月窗口不递，首年 20.2 万质价比 0.42，2028 插班再评）／弘立（官网费用 125,840＋建校费 ≈ 首年 14.1 万超线，弃）／YCIS（缓，≥100 万再启动）</td><td>—</td></tr>
 <tr><td><b>新候选</b></td><td><b>HKA 香港学堂</b>（西贡，IB 一贯 Pre-K1 3 岁起→G12，学费约 11.9 万起＋建校费 3.2 万/年＋入学费 2.5 万）——完整性核查发现的唯一实质缺口</td><td>9/10 已八维评分入榜（7.8 分·第 25 校，期权层，行权=年化 ≥100 万）</td></tr>
-</table>
+</table></div>
 <p class="mut">决策树（2027 Q1–Q2 注册季）：A 档 &lt;5 万/月→只行权 ≤9 万组；B 档 5–8 万→可加 ESF；年化 ≥100 万→ICHK 可行权；年化贴 155 万→墨尔文可行权。全灭→免费线兜底＋小一再战。完整预案（含墨尔文 vs ICHK"校园体验时间差"对比、参观七问清单）见 10 申请组合与录取决策预案（电脑本地版）。</p></div>
 
 <div class="card"><h2>📮 申请与参观实况（2026-09-09）</h2>
 <h3>邮件战役：13 校已发，邮箱全部官网核验</h3>
-<table>
+<div class="tscroll w4"><table>
 <tr><th>批次</th><th>学校</th><th>结果（校方书面）</th></tr>
 <tr><td>9/1–9/2 第一批</td><td>ESF／CDNIS／SIS／ASHK／Invictus／墨尔文／弘立／VEO</td><td>8 校全部回复：Invictus 2027 出局、ASHK 出局、SIS 今年无动作（2027.9.30 前递）、弘立 9 月必递、ESF 只在第一志愿排队、墨尔文须报 PN（评估 10–11 月）、CDNIS 窗口 11.1–11.30；<b>VEO 9/9 书面：K1 申请 9.7 已开 → 10.26 17:00 截止（硬死线）、PN 9.14 10:00 开 → 12.14 截止</b>；PN/K1 均合资格（K1 主申、PN 兜底，K1 有 offer 可退 PN）；证件可后补（offer 后至开学前补齐）；<b>校方主动索取校友证明</b>（成绩表/学生卡/毕业证书/班级照/学生手册任一——用户曾就读康怡校区=VEO 系，随申请附上；9/12 康怡资讯日校方未提及）</td></tr>
 <tr><td>9/5 第二批</td><td>学之园／YCIS／ICHK／思贝礼／Mulberry</td><td><b>9/7 思贝礼书面回复：确认麦兜落 2028/29 Nursery</b>（cutoff 8.31，差 29 天；该届月龄最大端）；2027.5 起可递申请、2027.9 初 Play-based 评估＋家长面谈；申请可在永居核实进行中递交，开学须持有效签证；邀 <b>10/10 Open Morning（已确认参加）</b>。9/8 二轮回信：Open Morning 报名已确认（两位）；HQP 双语/BIP 英式两路径 Nursery 起在申请表勾选；评估 2027.8 底–9 初按递表顺序排期（5 月开闸即递更稳）。其余 4 校待回</td></tr>
-</table>
+</table></div>
 <h3>参观日历（均需网上预约）</h3>
-<table>
+<div class="tscroll"><table>
 <tr><th>日期</th><th>场次</th></tr>
 <tr><td>9/10（四）17:00–18:30</td><td>墨尔文 CC 校区 Info Session（西九龙）</td></tr>
 <tr><td>9/12（六）</td><td>VEO 康怡资讯日（登记与否待定）</td></tr>
@@ -200,7 +205,7 @@ a{color:var(--acc)}
 <tr><td>10 月学期内</td><td>CDNIS 主校 Tour＋EYC Tour（官网登记，滚动场次）</td></tr>
 <tr><td>10/28（三）8:30–10:00</td><td>ESF 家长资讯环节＋校园参观（join-us.esf.edu.hk；乌溪沙校可单独登记 tour）</td></tr>
 <tr><td>预约制</td><td>Mulberry 大埔（WhatsApp 5598 0909）</td></tr>
-</table></div>
+</table></div></div>
 
 <div class="card"><h2>结论先行</h2>
 <ul>
@@ -223,14 +228,14 @@ a{color:var(--acc)}
 </div>
 
 <div class="card"><h2>下一步动作（2026.9–11 窗口）</h2>
-<table><tr><th>时间</th><th>动作</th></tr>
+<div class="tscroll"><table><tr><th>时间</th><th>动作</th></tr>
 <tr><td><b>9.1–9.30</b></td><td><b>ESF K1 中央申请</b>（递表前先定第一志愿校区——只在第一志愿排队、提交不可改；建议参观乌溪沙后定）＋ <b>弘立 ISF Pre-School</b>（校方书面 9 月必递）</td></tr>
 <tr><td><b>8.1–10.16（已开放）</b></td><td><b>学之园 K1 网申</b>（只接受网上报名，面试 11.9–11.10）——不等邮件回复，直接递</td></tr>
 <tr><td>尽快（滚动先到先得）</td><td>Malvern MCPS <b>PN</b> 递表（评估 10–11 月；<b>2027 进 PN 是锁定保 Prep 1 的唯一窗口</b>）；ROP145 询问邮件（enquiry@immd.gov.hk）</td></tr>
 <tr><td>9–11 月</td><td>参观季按日历执行（9/19 ICHK＋墨尔文同日两场为重心）；本地线其余各校窗口逐校跑；YCIS／ICHK／Mulberry 滚动递表</td></tr>
 <tr><td>11.1–11.30</td><td>CDNIS Nursery 窗口（一年仅 30 天，校方书面）</td></tr>
 <tr><td>2027.9.30 前</td><td>SIS 递表（2028/29 intake，评估约 2027.12）——今年无动作</td></tr>
-</table></div>
+</table></div></div>
 <p class="mut">本报告基于公开资料整理（来源见各页），不构成录取承诺；费用与招生口径以学校官方当年公告为准。框架重构 as-of 2026-08-30；校舍复核＋成本总账＋邮件战役回写 as-of 2026-09-05；VEO/学之园书面回写＋居住与搬迁决策 as-of 2026-09-09；申请组合与行权闸门＋Box Hill/弘立费用入库＋HKA 新候选 as-of 2026-09-09 晚；HKA 八维入榜（第 25 校·期权层）＋ESF 乌溪沙校舍事实入库 as-of 2026-09-10；Mulberry 费用修正＋税务三档模型＋墨尔文 9/19 锁定 as-of 2026-09-11。</p>
 
 <script>
