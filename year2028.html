@@ -74,6 +74,32 @@ a{color:var(--acc)}
 .pwall img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
 .pwall.n4 img:first-child{grid-column:span 2}
 @media(max-width:640px){.pwall{grid-template-columns:repeat(2,1fr)}.pwall.n4 img:first-child{grid-column:auto}}
+/* ---- iPhone/移动端适配：防溢出、横向可滚、字号收紧 ---- */
+@media(max-width:640px){
+  body{line-height:1.65}
+  .wrap{padding:14px 12px 56px}
+  header.top{padding:26px 12px 22px}
+  header.top h1{font-size:19px}
+  header.top .headline{font-size:14.5px;padding:10px 13px}
+  nav{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  .card{padding:14px 13px;margin:12px 0;border-radius:14px}
+  h2{font-size:15.5px}
+  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px;max-width:100%}
+  th,td{padding:6px 7px;word-break:break-word;min-width:0}
+  ul{padding-left:18px}
+  li{font-size:13.5px}
+  img{max-width:100%;height:auto}
+  .kpi{font-size:22px}
+  .scard{padding:14px 13px 12px}
+  .scard .nm{font-size:14.5px}
+  .scard .score{font-size:21px;top:12px;right:13px}
+  .shead{padding-right:60px}
+  .xcard{padding:12px 13px}
+  .xcard span{min-width:0}
+  .chips{gap:6px}
+  .chip{padding:6px 12px;font-size:12.5px}
+}
 </style></head><body>
 <header class="top"><div class="wrap"><h1>2028 梯队与质价比分析 · 预算放开版</h1>
 <p>麦兜（2024.9.30 生）· 2027年9月入园全局调研 v2（第一性原则重构）｜ 数据核验截至 2026-09-05</p></div></header>
