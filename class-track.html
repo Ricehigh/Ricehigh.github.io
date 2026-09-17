@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow">
+<script>(function(){var H="91f39d3ed5fbb8c4aafe0748b9f4a9de970658316cf5f40803e468a0211cdc37";try{if(localStorage.getItem("mdk")===H)return;localStorage.setItem("mdn",location.pathname);}catch(e){}location.replace("/login.html");})();</script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>班别判断与身份联动 · PN 还是 K1</title><style>
+:root{--ink:#141a26;--mut:#66707f;--line:#e6eaf1;--good:#1e7e4a;--warn:#b25e09;--bad:#b02a2a;
+--bg:#f4f6f9;--card:#fff;--acc:#2b6cb0;--deep:#101725;--teal:#2c7a7b;--amber:#d69e2e;--violet:#6b46c1}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:20px 16px 72px}
+header.top{background:linear-gradient(135deg,#101725 0%,#1b2b45 60%,#23406b 100%);color:#fff;padding:34px 16px 30px}
+header.top .wrap{padding:0}
+header.top h1{font-size:21px;letter-spacing:.5px}
+header.top p{font-size:13px;opacity:.72;margin-top:6px}
+header.top .headline{font-size:16px;margin-top:14px;padding:12px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;backdrop-filter:blur(4px)}
+nav{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 16px;font-size:13px;position:sticky;top:0;z-index:9}
+nav a{color:var(--acc);text-decoration:none;margin-right:14px;white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px;margin:16px 0;box-shadow:0 1px 3px rgba(16,23,37,.05)}
+h2{font-size:16.5px;margin-bottom:12px;color:var(--deep);letter-spacing:.3px}
+h3{font-size:15px;margin:14px 0 6px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:#eef2f7;font-weight:600}
+ul{padding-left:20px} li{margin:4px 0;font-size:14px}
+.tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:12.5px;font-weight:600}
+.tag.good{background:#e3f3ea;color:var(--good)} .tag.warn{background:#fbeed7;color:var(--warn)} .tag.bad{background:#fbe3e3;color:var(--bad)}
+.mut{color:var(--mut);font-size:12.5px}
+img.chart{max-width:100%;border:1px solid var(--line);border-radius:14px;background:#fff}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+a{color:var(--acc)}
+.src li{font-size:12.5px;word-break:break-all}
+.kpi{font-size:26px;font-weight:700;color:var(--acc)}
+/* ---- 默会卡片系统 ---- */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 15px;font-size:13px;cursor:pointer;color:var(--mut);transition:all .18s ease;user-select:none}
+.chip:hover{transform:translateY(-1px);border-color:var(--acc)}
+.chip.on{background:var(--deep);color:#fff;border-color:var(--deep)}
+.chip b{font-weight:700}
+.chip .n{opacity:.55;font-size:11.5px;margin-left:4px}
+.pref{display:inline-flex;align-items:center;gap:6px;background:#eef2f9;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:12.5px;margin:3px 4px 0 0;color:#4a5568}
+.pref .dot{width:7px;height:7px;border-radius:50%;background:#63e6be}
+.pref .dot.open{background:#f6d365}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.sgrid{grid-template-columns:1fr}}
+.scard{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;border-left:5px solid var(--acc);transition:all .2s ease;position:relative;animation:rise .5s ease both}
+.scard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,23,37,.10);border-color:#cdd6e4}
+@keyframes rise{from{transform:translateY(10px)}to{transform:none}}
+.scard.g{border-left-color:var(--good)} .scard.w{border-left-color:var(--amber)} .scard.b{border-left-color:#c8ccd2}
+.scard .nm{font-size:15.5px;font-weight:700;color:var(--deep)}
+.scard .tr{font-size:12px;color:var(--mut);margin-top:2px}
+.scard .score{position:absolute;top:14px;right:16px;font-size:24px;font-weight:800;color:var(--acc);line-height:1}
+.scard .score small{display:block;font-size:10px;color:var(--mut);font-weight:400;text-align:right}
+.scard .vd{margin-top:8px;font-size:12.5px}
+.scard .fee{margin-top:6px;font-size:12.5px;color:var(--mut)}
+.bars{display:flex;gap:3px;margin-top:10px;height:6px}
+.bars i{flex:1;border-radius:3px;background:linear-gradient(90deg,var(--acc),#63b3ed);opacity:.85;display:block}
+.bars i.lo{background:#e2e8f0}
+.geo{margin-top:8px;font-size:11.5px;color:var(--mut);letter-spacing:2px}
+.geo b{color:var(--teal)}
+.lock{position:absolute;bottom:12px;right:14px;width:9px;height:9px;border-radius:50%;background:var(--amber);animation:breathe 2.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(214,158,46,.45)}50%{box-shadow:0 0 0 8px rgba(214,158,46,0)}}
+.xcard{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:8px 0;text-decoration:none;color:inherit;transition:all .18s}
+.xcard:hover{transform:translateX(4px);border-color:var(--acc)}
+.xcard .ar{color:var(--acc);font-size:17px}
+.dimbar{height:7px;border-radius:4px;background:#edf1f7;overflow:hidden;margin-top:2px}
+.dimbar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--teal),#63b3ed)}
+/* ---- 校徽与特点句 ---- */
+.shead{display:flex;gap:10px;align-items:center;padding-right:72px}
+.slogo{width:44px;height:44px;object-fit:contain;border-radius:10px;background:#fff;border:1px solid var(--line);flex:none;padding:3px}
+.slogo.big{width:56px;height:56px;padding:4px}
+.tagl{margin-top:8px;font-size:12.5px;color:var(--teal);font-weight:600;line-height:1.45}
+/* ---- 校园照片墙 ---- */
+.pwall{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pwall img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.pwall.n4 img:first-child{grid-column:span 2}
+@media(max-width:640px){.pwall{grid-template-columns:repeat(2,1fr)}.pwall.n4 img:first-child{grid-column:auto}}
+</style></head><body>
+<header class="top"><div class="wrap"><h1>班别判断与身份联动 · PN 还是 K1</h1>
+<p>麦兜（2024.9.30 生）· 2027年9月入园全局调研 v2（第一性原则重构）｜ 数据核验截至 2026-09-05</p></div></header>
+<nav><a href="index.html">← 总览</a></nav>
+<div class="wrap">
+<div class="card"><h2>结论先行</h2>
+<p><b>麦兜 2024.9.30 出生 → 2027.9 入园时 2 岁 11 个月，正好卡在两个班别的分界线上：</b>EDB 口径 2027/28 K1 收 2024.12.31 前出生（他 ✓，班内最小端）；私立园 PN（2 岁班）2027/28 收 2024.9–2025.8 出生段（他 ✓，班内最大端）。<b>所以私立双语园大多"PN 和 K1 都能上"，国际校则按各自年龄 cutoff 只能进其中一个班。</b>逐校判断见下表。</p>
+<p><b>总闸门是身份线：</b>单程证批出前无法注册入学。三种进度情景的应对见本页下半部分——申请动作（递表/面试）不受身份限制，<b>只有"注册/留位"必须等批出</b>。</p></div>
+
+<div class="card"><h2>2027 年 9 月入园 · 逐校班别判断（case by case）</h2>
+<table>
+<tr><th>学校</th><th>2027 可进班别</th><th>判断依据与备注</th></tr>
+<tr><td><b>ESF 英基</b></td><td>仅 K1</td><td>ESF 无 PN 班；K1 2027/28 = 2024 年出生 ✓（班内最小端，ESF 按出生年份招生，无弹性）</td></tr>
+<tr><td><b>CDNIS 加拿大国际</b></td><td>仅 Nursery（2 岁班）</td><td>Nursery 2027/28 = 2024.9.1–2025.12.31 出生，麦兜属<b>窗口最年长端</b>（幼儿评估中年龄大是优势）；3 岁班 EY1 要等 2028</td></tr>
+<tr><td><b>YCIS 耀中</b></td><td>仅三岁班（K1 对应）</td><td>入学学年满 3 岁（2027.9.30 满 3 岁 ✓）</td></tr>
+<tr><td><b>SIS 新加坡国际</b></td><td>2027 无班可进</td><td>PY1 须满 4 岁 → 2028/29 才可入；校方书面 2026.9：2028/29 截止 2027.9.30、评估约 2027.12，今年无动作</td></tr>
+<tr><td><b>Invictus 茵维特</b></td><td><b>2027 出局</b></td><td>校方书面 2026.9：出生日卡线不合资格（IEYC 自 3 岁 K1 起）；2028 再评估，10.31 开放日可选看校</td></tr>
+<tr><td><b>Malvern 墨尔文</b></td><td><b>仅 PN（不报 K1）</b></td><td>校方书面 2026.9 指正；路径 PN 2027 → K1 2028 → Prep 1 2030；滚动先到先得、评估 10–11 月，宜尽快递表</td></tr>
+<tr><td><b>弘立 ISF Pre-School</b></td><td>待校方书面</td><td>窗口 2026.9.1–9.30（校方书面，9 月必递）；暂不入 24 校榜，入榜需补八维评分一轮</td></tr>
+<tr><td><b>ICS 基督教国际（已移出）</b></td><td>仅 Reception 1</td><td>R1 为幼稚园入口年（3 岁段）✓；更低龄不设班；按宗教口径已移出名单，备查</td></tr>
+<tr><td><b>思贝礼 Shrewsbury</b></td><td><b>2027 无班可进</b></td><td>校方书面 2026.9.7：2027/28 Nursery 收 2023.9.1–2024.8.31 出生，麦兜差 29 天卡线外，<b>落 2028/29 Nursery（该届月龄最大端）</b>；2027.5 起可递申请、2027.8 底–9 初评估（按递表顺序排期）；10/10 Open Morning 报名已确认</td></tr>
+<tr><td><b>NIS 挪威国际</b></td><td>仅 K1（3 岁）</td><td>✓</td></tr>
+<tr><td><b>ASHK 美国学校</b></td><td><b>2027/2028 均出局</b></td><td>校方书面 2026.9：5 岁起招、无低龄班，最早 2029/30——移出申请清单</td></tr>
+<tr><td><b>ICHK 康乐园</b></td><td><b>PN 或 Nursery 都可</b></td><td>Nursery（3 岁）✓；2 岁 8 个月可先读 Pre-Nursery 下午班——2027.9 他 2y11m，两条路都开着</td></tr>
+<tr><td><b>Box Hill 博士山</b></td><td><b>PN 或 K1 都可</b></td><td>收 2 岁起 PN；K1 也符合。想先适应一年选 PN，想省一年选 K1</td></tr>
+<tr><td><b>Mulberry House 懋柏礼</b></td><td><b>PN 或 K1 都可</b></td><td>同上</td></tr>
+<tr><td><b>学之园 / 英艺 / 朗思 / 安基司 / 绿茵</b></td><td><b>PN 或 K1 都可</b></td><td>私立双语园普遍设 2 岁班；EDB K1 年龄线 ✓。学之园 9/9 书面：先申 K1（面试 11 月）、无学额可转 PN、证件后补、校区可改</td></tr>
+<tr><td><b>IMS 蒙特梭利</b></td><td><b>Foundation 或 Casa 都可</b></td><td>Casa dei Bambini 3–6 岁混龄（2y11m ✓）；另有 2–3 岁 Foundation 亲子评估班；全年滚动</td></tr>
+<tr><td><b>维多利亚 VEO</b></td><td><b>PN 或 K1 都可</b></td><td>9/9 书面：PN/K1 均合资格；<b>K1 9.7–10.26 17:00（硬死线）、PN 9.14–12.14</b>；K1 有 offer 可退 PN；证件开学前补齐；校友证明（康怡）随附</td></tr>
+<tr><td><b>剑鸣 Kingston</b></td><td><b>PN 或 K1 都可</b></td><td>收 PN–K2 ✓</td></tr>
+<tr><td><b>国际英文 SC</b></td><td>仅 K1</td><td>2027 ✓（未设 PN 口径，以校方核实）</td></tr>
+<tr><td><b>弘爵 Sear Rogers</b></td><td>幼稚园段 ✓</td><td>已评不合适（4.95 分），备查不入申请清单</td></tr>
+<tr><td><b>免费计划园</b></td><td>仅 K1</td><td>免费计划不含 PN；K1 年龄线 ✓（注册证前提）</td></tr>
+</table>
+<p class="mut">口径：国际校按各自官网出生年月 cutoff（已在各单页标注）；私立园按 EDB 2027/28 K1 截止 2024.12.31 与 PN 通行年龄带。标注"都可"的学校，递表时需在报名表上选定班别——建议默认报 K1，PN 只作身份/适应情景的备选。</p></div>
+
+<div class="card"><h2>身份进度实况（2026-08-30 更新，以交接文件为准）</h2>
+<table>
+<tr><th>节点</th><th>时间</th><th>状态与要点</th></tr>
+<tr><td>《婚姻状况证明书（无婚姻记录证明）》</td><td>2026-08-30</td><td>✅ 婚姻登记处当场办结</td></tr>
+<tr><td>《登记事项证明书》</td><td>2026-08-30 屯门人事登记办事处递交 → <b>2026-10-06 取件</b>（25 个工作日）</td><td>⏳ 取件时<b>当场逐字核对</b>：姓名拼音／出生日期／身份证号／国籍（必须"中国"）／婚姻状况栏，有错当场重开；证明开出日起 <b>6 个月有效</b></td></tr>
+<tr><td>罗湖出入境提交单程证资料（夫妻团聚＋偕行子女，路径 A）</td><td>10 月中取件后尽快递</td><td>⏳ 在 6 个月有效期内提交；"回港付费资料（2 个月）"待窗口初审后办理</td></tr>
+<tr><td>审批</td><td>深圳侧 40 个工作日＋香港侧审批，<b>双边合计约 2–3 个月 → 预计 2026.12–2027.1 批出</b></td><td>⏳ 以受理回执为准；获批＝注销内地户口，不可逆，出发前家庭须达成共识</td></tr>
+<tr><td>麦兜永居核实（ROP145）</td><td>到港领居民身份证后</td><td>⏳ <b>核心待确认</b>：书面问入境处（enquiry@immd.gov.hk 首选留底）偕行子女到港后能否即交 ROP145；兜底为 7 年自然转永居（约 2033）</td></tr>
+</table>
+<p><b>对照下方三情景：当前轨道 = 情景 A（2027.3 前批出），按双边 2–3 个月口径提前量约 1–2 个月，比单看深圳侧 40 个工作日要紧。</b>2026.9–11 的申请窗口照跑，不等身份；免费园注册证（约 2027.1 中央注册）压线可及，若审批偏慢须警惕滑向情景 B。上学本身不卡永居，香港居民身份即可注册——路径 A 落地不耽误任何入学窗口。</p></div>
+
+<div class="card"><h2>身份进度 × 三情景应对（动态调整规则）</h2>
+<table>
+<tr><th>情景</th><th>触发条件</th><th>动作调整</th></tr>
+<tr><td><b>A · 顺利</b></td><td>单程证 2027 年 3 月前批出</td><td>全选项开放：2027.9 正常入学，按总分排序选校注册；免费园注册证与中央注册（约 1 月）都能赶上</td></tr>
+<tr><td><b>B · 压线</b></td><td>2027 年 3–7 月批出</td><td>重心移向<b>全年滚动招生的学校</b>（IMS/Invictus/ICHK/NIS）——注册时间灵活；免费园过中央注册日后只能靠剩余学额，降级为纯兜底；已付的留位费按各校退款条款处理</td></tr>
+<tr><td><b>C · 延迟</b></td><td>2027.9 前未批出</td><td>整体推迟到 2028：国际校体系班别自然平移（ESF→K2、CDNIS→EY1、SIS→PY1 正好 2028，不受影响）；本地免费园 K1 2028 会超龄，只能 K2 插班或转私立——<b>届时免费线保底失效，私立双语/国际线成为主轨</b></td></tr>
+</table></div>
+
+<div class="card"><h2>操作要点</h2>
+<ul>
+<li><b>递表 ≠ 注册：</b>所有递表、面试、评估在身份批出前都可正常进行（国际校明确接受），只有注册交留位费需要证件。所以 2026.9–11 的申请窗口照跑，不等身份。</li>
+<li><b>默认报 K1：</b>除 CDNIS（只有 Nursery）外，2027 目标班别统一按 K1/3 岁班报；PN 仅在情景 B/C 下作为"先入园适应"的降级选项启用。</li>
+<li><b>留位费纪律：</b>身份未批前，遇到要交大额留位费/债券的 offer，先与校方书面确认"证件延迟"的退款或延期条款再付款。</li>
+<li><b>每次身份进度更新后：</b>对照上表确认当前情景（A/B/C），相应调整 9–11 月的递表优先级——这条建议写进你的月度复盘。</li>
+</ul></div>
+</div></body></html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow">
+<script>(function(){var H="91f39d3ed5fbb8c4aafe0748b9f4a9de970658316cf5f40803e468a0211cdc37";try{if(localStorage.getItem("mdk")===H)return;localStorage.setItem("mdn",location.pathname);}catch(e){}location.replace("/login.html");})();</script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Malvern 墨尔文（MCPS→MCHK）</title><style>
+:root{--ink:#141a26;--mut:#66707f;--line:#e6eaf1;--good:#1e7e4a;--warn:#b25e09;--bad:#b02a2a;
+--bg:#f4f6f9;--card:#fff;--acc:#2b6cb0;--deep:#101725;--teal:#2c7a7b;--amber:#d69e2e;--violet:#6b46c1}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:20px 16px 72px}
+header.top{background:linear-gradient(135deg,#101725 0%,#1b2b45 60%,#23406b 100%);color:#fff;padding:34px 16px 30px}
+header.top .wrap{padding:0}
+header.top h1{font-size:21px;letter-spacing:.5px}
+header.top p{font-size:13px;opacity:.72;margin-top:6px}
+header.top .headline{font-size:16px;margin-top:14px;padding:12px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;backdrop-filter:blur(4px)}
+nav{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 16px;font-size:13px;position:sticky;top:0;z-index:9}
+nav a{color:var(--acc);text-decoration:none;margin-right:14px;white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px;margin:16px 0;box-shadow:0 1px 3px rgba(16,23,37,.05)}
+h2{font-size:16.5px;margin-bottom:12px;color:var(--deep);letter-spacing:.3px}
+h3{font-size:15px;margin:14px 0 6px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:#eef2f7;font-weight:600}
+ul{padding-left:20px} li{margin:4px 0;font-size:14px}
+.tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:12.5px;font-weight:600}
+.tag.good{background:#e3f3ea;color:var(--good)} .tag.warn{background:#fbeed7;color:var(--warn)} .tag.bad{background:#fbe3e3;color:var(--bad)}
+.mut{color:var(--mut);font-size:12.5px}
+img.chart{max-width:100%;border:1px solid var(--line);border-radius:14px;background:#fff}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+a{color:var(--acc)}
+.src li{font-size:12.5px;word-break:break-all}
+.kpi{font-size:26px;font-weight:700;color:var(--acc)}
+/* ---- 默会卡片系统 ---- */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 15px;font-size:13px;cursor:pointer;color:var(--mut);transition:all .18s ease;user-select:none}
+.chip:hover{transform:translateY(-1px);border-color:var(--acc)}
+.chip.on{background:var(--deep);color:#fff;border-color:var(--deep)}
+.chip b{font-weight:700}
+.chip .n{opacity:.55;font-size:11.5px;margin-left:4px}
+.pref{display:inline-flex;align-items:center;gap:6px;background:#eef2f9;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:12.5px;margin:3px 4px 0 0;color:#4a5568}
+.pref .dot{width:7px;height:7px;border-radius:50%;background:#63e6be}
+.pref .dot.open{background:#f6d365}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.sgrid{grid-template-columns:1fr}}
+.scard{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;border-left:5px solid var(--acc);transition:all .2s ease;position:relative;animation:rise .5s ease both}
+.scard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,23,37,.10);border-color:#cdd6e4}
+@keyframes rise{from{transform:translateY(10px)}to{transform:none}}
+.scard.g{border-left-color:var(--good)} .scard.w{border-left-color:var(--amber)} .scard.b{border-left-color:#c8ccd2}
+.scard .nm{font-size:15.5px;font-weight:700;color:var(--deep)}
+.scard .tr{font-size:12px;color:var(--mut);margin-top:2px}
+.scard .score{position:absolute;top:14px;right:16px;font-size:24px;font-weight:800;color:var(--acc);line-height:1}
+.scard .score small{display:block;font-size:10px;color:var(--mut);font-weight:400;text-align:right}
+.scard .vd{margin-top:8px;font-size:12.5px}
+.scard .fee{margin-top:6px;font-size:12.5px;color:var(--mut)}
+.bars{display:flex;gap:3px;margin-top:10px;height:6px}
+.bars i{flex:1;border-radius:3px;background:linear-gradient(90deg,var(--acc),#63b3ed);opacity:.85;display:block}
+.bars i.lo{background:#e2e8f0}
+.geo{margin-top:8px;font-size:11.5px;color:var(--mut);letter-spacing:2px}
+.geo b{color:var(--teal)}
+.lock{position:absolute;bottom:12px;right:14px;width:9px;height:9px;border-radius:50%;background:var(--amber);animation:breathe 2.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(214,158,46,.45)}50%{box-shadow:0 0 0 8px rgba(214,158,46,0)}}
+.xcard{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:8px 0;text-decoration:none;color:inherit;transition:all .18s}
+.xcard:hover{transform:translateX(4px);border-color:var(--acc)}
+.xcard .ar{color:var(--acc);font-size:17px}
+.dimbar{height:7px;border-radius:4px;background:#edf1f7;overflow:hidden;margin-top:2px}
+.dimbar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--teal),#63b3ed)}
+/* ---- 校徽与特点句 ---- */
+.shead{display:flex;gap:10px;align-items:center;padding-right:72px}
+.slogo{width:44px;height:44px;object-fit:contain;border-radius:10px;background:#fff;border:1px solid var(--line);flex:none;padding:3px}
+.slogo.big{width:56px;height:56px;padding:4px}
+.tagl{margin-top:8px;font-size:12.5px;color:var(--teal);font-weight:600;line-height:1.45}
+/* ---- 校园照片墙 ---- */
+.pwall{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pwall img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.pwall.n4 img:first-child{grid-column:span 2}
+@media(max-width:640px){.pwall{grid-template-columns:repeat(2,1fr)}.pwall.n4 img:first-child{grid-column:auto}}
+</style></head><body>
+<header class="top"><div class="wrap"><h1>Malvern 墨尔文（MCPS→MCHK）</h1>
+<p>麦兜（2024.9.30 生）· 2027年9月入园全局调研 v2（第一性原则重构）｜ 数据核验截至 2026-09-05</p></div></header>
+<nav><a href="../index.html">← 总览</a></nav>
+<div class="wrap">
+<div class="card"><div style="display:flex;gap:12px;align-items:center"><img class="slogo big" src="../assets/img/malvern/logo.jpg" alt="Malvern 墨尔文（MCPS→MCHK） 校徽"><div><span class="tag good">合适 · 预算放开后理念匹配最高</span>
+<span class="mut">　国际线 · 预算放开新增（准15年一贯）</span></div></div>
+<h3 style="margin-top:12px">结论</h3><p>预算放开后理念匹配最高</p></div>
+<div class="card"><h2>校园实景</h2><div class="pwall n4"><img src="../assets/img/malvern/photo1.jpg" alt="Malvern 墨尔文（MCPS→MCHK） 校园照片" loading="lazy"><img src="../assets/img/malvern/photo2.jpg" alt="Malvern 墨尔文（MCPS→MCHK） 校园照片" loading="lazy"><img src="../assets/img/malvern/photo3.jpg" alt="Malvern 墨尔文（MCPS→MCHK） 校园照片" loading="lazy"><img src="../assets/img/malvern/photo4.jpg" alt="Malvern 墨尔文（MCPS→MCHK） 校园照片" loading="lazy"></div><p class="mut" style="margin-top:10px">图片来自学校官网／公开页面（2026.9 抓取，仅作择校参考，版权归校方）</p></div>
+<div class="card"><h2>关键事实</h2><table><tr><th style='width:30%'>位置</th><td>幼儿段 MCPS：Island West（西营盘 Viking Court G/F–1/F 街铺）/ Coronation Circle（西九龙 G09–12 商场铺位）——均为市区铺位校舍（2026.9 官网地址核实，软硬件维度 8→7 扣分）；主校 MCHK：大埔白石角——新界东动线正中心（2030 Prep 1 起回家门口）</td></tr><tr><th style='width:30%'>2027 入口</th><td>Pre-Nursery 2027（麦兜 ✓）——校方书面 2026.9 指正应报 PN 而非 K1；路径：PN 2027 → K1 2028 → Prep 1 2030；play-based 体验评估</td></tr><tr><th style='width:30%'>费用</th><td>幼儿段 MCPS（2026/27 SOSOMAMA 收费口径）：PN/K1/K2 半日 122,001＋年建校费 42,000＝约 16.4 万/年；全日 209,429＋42,000＝约 25.1 万/年；主校段 18–22 万按年级递增（签约前以官网价目为准）</td></tr><tr><th style='width:30%'>申请节点</th><td>滚动招生、先到先得——校方书面 2026.9：申请已开放，体验评估安排在 2026 年 10–11 月；签证在办可申（表上备注即可），开学须持有效签证</td></tr><tr><th style='width:30%'>教学/师生比</th><td>班额 20–24、师生比 1:6.7–8；EYFS＋Reggio 环境设计＋Forest-Beach School（全港首批，Level 3 持证导师）；英普 50/50 双母语教师</td></tr><tr><th style='width:30%'>生源组成</th><td>英国墨尔文学院 150 年品牌；MCPS 2017（西九龙）/2019（港岛西）两校区；国际＋本地专业家庭</td></tr><tr><th style='width:30%'>升学衔接</th><td>准一贯制：MCPS 连续读满两学年且 EYFS 三大领域（个人社交情感/体能/沟通语言）达标 → 保证 MCHK Prep 1 学位（校方书面条款 2026.9 确认）→ IB PYP/MYP/DP 至 Y13</td></tr><tr><th style='width:30%'>地理弹性（居住未定下的适应力）</th><td><span class='geo'><b>●●●○○</b></span> 6/10（多校区/交通可达性；不进加权总分）</td></tr></table></div>
+
+<div class="grid2">
+<div class="card"><h2>优点</h2><ul><li>启蒙理念全场最强：EYFS 玩中学＋Reggio＋Forest-Beach 森林海滩课堂——&#x27;反填鸭&#x27;光谱最远端</li><li>准 15 年一贯：读满两年保 Prep 1 学位，保证条款细节已获校方书面确认（2026.9）</li><li>主校在大埔白石角——2027–2030 幼儿段通勤换 2030 后 13 年在家门口</li><li>英普 50/50 双母语教师同班，英语硬约束达标且中文不丢</li><li>体育艺术：Forest-Beach 户外体能＋主校 Signature 表演艺术/体育/创业教育项目</li></ul></div>
+<div class="card"><h2>缺点 / 风险</h2><ul><li>⚠️ 直升条款的时间锁：须 2027 入 PN 起连续读满两学年（PN＋K1）才保 Prep 1——2028 才插班只剩一年，拿不到保证学位；Malvern 是&#x27;要么 2027 进、要么别进&#x27;的选项</li><li>幼儿段两校区均为市区铺位校舍（街铺/商场铺），无自有户外场地——空间规模是硬伤，Reggio 室内设计是补偿</li><li>幼儿段校区在西营盘/西九龙，2027–2030 三年通勤是真实成本（校车/接送需实测）</li><li>主校段 18–22 万/年，比 ESF 贵近一倍——溢价买的是理念与圈子，不是出口成绩</li></ul></div>
+</div>
+
+<div class="card"><h2>八维评分（1–10）与依据</h2>
+<div class="grid2">
+<div><table><tr><th>维度</th><th>分</th></tr><tr><td>声誉与出口<div class='dimbar'><i style='width:80%'></i></div></td><td style='text-align:center'><b>8</b></td></tr><tr><td>启蒙理念与体系<div class='dimbar'><i style='width:100%'></i></div></td><td style='text-align:center'><b>10</b></td></tr><tr><td>英语环境<div class='dimbar'><i style='width:90%'></i></div></td><td style='text-align:center'><b>9</b></td></tr><tr><td>软硬件与师生比<div class='dimbar'><i style='width:70%'></i></div></td><td style='text-align:center'><b>7</b></td></tr><tr><td>直升确定性<div class='dimbar'><i style='width:90%'></i></div></td><td style='text-align:center'><b>9</b></td></tr><tr><td>体育艺术<div class='dimbar'><i style='width:80%'></i></div></td><td style='text-align:center'><b>8</b></td></tr><tr><td>圈子<div class='dimbar'><i style='width:70%'></i></div></td><td style='text-align:center'><b>7</b></td></tr><tr><td>质价比<div class='dimbar'><i style='width:70%'></i></div></td><td style='text-align:center'><b>7</b></td></tr>
+<tr><td><b>加权总分</b>（理念20/英语15/直升15/声誉10/软硬件10/体艺10/圈子10/质价比10）</td><td style='text-align:center'><b>8.4</b></td></tr></table></div>
+<div><img class="chart" src="../assets/radar_malvern.png" alt="雷达图"></div>
+</div>
+<p class="mut" style="margin-top:8px">评分备注：声誉8（150年英国品牌）｜体系9（EYFS+Reggio+Forest-Beach→IB）｜英语9（英普50/50）｜师生比7（1:6.7–8，但幼儿段为市区铺位校舍——2026.9 核实扣分）｜衔接9（保Prep1→IBDP）｜费用可行7（预算放开后可行，主校段18–22万）（备注文字沿用上轮六维口径，个别维度未展开体艺/圈子；以八维表格为准）</p>
+<p class="mut">评分为研究员基于下列公开来源的综合判断，属主观加权，非官方排名；费用与招生口径以学校官网当年公告为准。</p>
+</div>
+
+<div class="card"><h2>资料来源（已剔除纯广告口径）</h2><ul class="src">
+<li><a href="https://www.malverncollege.org.hk/wp-content/uploads/2018/01/Malvern-003.pdf">Malvern College 官网校刊（all-through 与保 Prep 1 条款）</a></li><li><a href="https://www.malvernpreschool.hk/faqs/">MCPS 官网 FAQs（班额/师生比/提前一年申请）</a></li><li><a href="https://malverncollegefamily.org/malvern-college-pre-school-hong-kong/">Malvern College Family 官网（50/50 双语/Forest-Beach，2026-04 更新）</a></li><li><a href="https://expatliving.net/malvern-hong-kong-preschool-education/">Expat Living·MCPS 校长访谈（升读安排）</a></li>
+</ul></div>
+<p class="mut"><a href="../index.html">← 返回总览</a></p>
+</div></body></html>

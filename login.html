@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>家庭资料库 · 验证</title>
+<style>
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f4f1ea;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+.box{background:#fff;border-radius:16px;padding:36px 28px;width:min(320px,86vw);box-shadow:0 8px 30px rgba(60,50,30,.10);text-align:center}
+h1{font-size:20px;margin:0 0 6px;color:#3d3a33}
+p.sub{font-size:13px;color:#8a857a;margin:0 0 22px}
+input{width:100%;box-sizing:border-box;padding:13px 14px;font-size:16px;border:1.5px solid #ddd6c8;border-radius:10px;outline:none;text-align:center;letter-spacing:2px}
+input:focus{border-color:#2f7e6e}
+button{margin-top:14px;width:100%;padding:13px;font-size:16px;font-weight:600;color:#fff;background:#2f7e6e;border:none;border-radius:10px;cursor:pointer}
+button:active{background:#266258}
+#err{display:none;margin:12px 0 0;font-size:13px;color:#b4453a}
+</style></head><body>
+<div class="box"><h1>🔒 家庭资料库</h1><p class="sub">输入口令继续</p>
+<input id="pw" type="password" placeholder="口令" autocomplete="current-password">
+<button onclick="go()">进 入</button><p id="err">口令不对，再试一次</p></div>
+<script>
+var H="91f39d3ed5fbb8c4aafe0748b9f4a9de970658316cf5f40803e468a0211cdc37";
+async function go(){
+  var v=document.getElementById("pw").value;
+  if(!v)return;
+  if(!window.crypto||!crypto.subtle){document.getElementById("err").textContent="当前浏览器不支持安全校验，请用系统浏览器打开";document.getElementById("err").style.display="block";return;}
+  var b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(v));
+  var h=Array.prototype.map.call(new Uint8Array(b),function(x){return("0"+x.toString(16)).slice(-2);}).join("");
+  if(h===H){
+    try{localStorage.setItem("mdk",h);var n=localStorage.getItem("mdn")||"/index.html";location.replace(n);}catch(e){location.replace("/index.html");}
+  }else{document.getElementById("err").textContent="口令不对，再试一次";document.getElementById("err").style.display="block";}
+}
+document.getElementById("pw").addEventListener("keydown",function(e){if(e.key==="Enter")go();});
+</script></body></html>

@@ -1,0 +1,240 @@
+{
+ "esf": {
+  "site": "https://www.esf.edu.hk",
+  "logo": "assets/img/esf/logo.jpg",
+  "photos": [
+   "assets/img/esf/photo1.jpg",
+   "assets/img/esf/photo2.jpg",
+   "assets/img/esf/photo3.jpg",
+   "assets/img/esf/photo4.jpg"
+  ]
+ },
+ "cdnis": {
+  "site": "https://www.cdnis.edu.hk",
+  "logo": "assets/img/cdnis/logo.jpg",
+  "photos": [
+   "assets/img/cdnis/photo1.jpg",
+   "assets/img/cdnis/photo2.jpg",
+   "assets/img/cdnis/photo3.jpg",
+   "assets/img/cdnis/photo4.jpg"
+  ]
+ },
+ "ycis": {
+  "site": "https://www.ycis-hk.com",
+  "logo": "assets/img/ycis/logo.svg",
+  "photos": [
+   "assets/img/ycis/photo1.jpg",
+   "assets/img/ycis/photo2.jpg",
+   "assets/img/ycis/photo3.jpg",
+   "assets/img/ycis/photo4.jpg"
+  ]
+ },
+ "sis": {
+  "site": "https://www.singapore.edu.hk",
+  "logo": "assets/img/sis/logo.jpg",
+  "photos": [
+   "assets/img/sis/photo1.jpg",
+   "assets/img/sis/photo2.jpg",
+   "assets/img/sis/photo3.jpg"
+  ]
+ },
+ "ashk": {
+  "site": "https://www.ashk.edu.hk",
+  "logo": "assets/img/ashk/logo.svg",
+  "photos": [
+   "assets/img/ashk/photo1.jpg",
+   "assets/img/ashk/photo2.jpg",
+   "assets/img/ashk/photo3.jpg",
+   "assets/img/ashk/photo4.jpg"
+  ]
+ },
+ "shrewsbury": {
+  "site": "https://www.shrewsbury.edu.hk",
+  "logo": "assets/img/shrewsbury/logo.jpg",
+  "photos": [
+   "assets/img/shrewsbury/photo1.jpg",
+   "assets/img/shrewsbury/photo2.jpg",
+   "assets/img/shrewsbury/photo3.jpg",
+   "assets/img/shrewsbury/photo4.jpg"
+  ]
+ },
+ "nis": {
+  "site": "https://www.nis.edu.hk",
+  "logo": "assets/img/nis/logo.jpg",
+  "photos": [
+   "assets/img/nis/photo1.jpg",
+   "assets/img/nis/photo2.jpg",
+   "assets/img/nis/photo3.jpg",
+   "assets/img/nis/photo4.jpg"
+  ]
+ },
+ "ichk": {
+  "site": "https://www.ichkhly.edu.hk",
+  "logo": "assets/img/ichk/logo.jpg",
+  "photos": [
+   "assets/img/ichk/photo1.jpg",
+   "assets/img/ichk/photo2.jpg",
+   "assets/img/ichk/photo3.jpg"
+  ]
+ },
+ "learning-habitat": {
+  "site": "https://www.learninghabitat.org",
+  "logo": "assets/img/learning-habitat/logo.svg",
+  "photos": [
+   "assets/img/learning-habitat/photo1.jpg",
+   "assets/img/learning-habitat/photo2.jpg",
+   "assets/img/learning-habitat/photo3.jpg",
+   "assets/img/learning-habitat/photo4.jpg"
+  ]
+ },
+ "anchors": {
+  "site": "https://www.anchorsacademy.edu.hk",
+  "photos": [
+   "assets/img/anchors/photo1.jpg",
+   "assets/img/anchors/photo2.jpg",
+   "assets/img/anchors/photo3.jpg",
+   "assets/img/anchors/photo4.jpg"
+  ],
+  "logo": "assets/img/anchors/logo.jpg"
+ },
+ "think": {
+  "site": "https://www.think.edu.hk",
+  "logo": "assets/img/think/logo.jpg",
+  "photos": [
+   "assets/img/think/photo1.jpg",
+   "assets/img/think/photo2.jpg",
+   "assets/img/think/photo3.jpg"
+  ]
+ },
+ "free-kg": {
+  "site": "https://www.edb.gov.hk",
+  "logo": "assets/img/free-kg/logo.jpg",
+  "photos": []
+ },
+ "invictus": {
+  "site": "https://www.invictus.edu.hk",
+  "logo": "assets/img/invictus/logo.jpg",
+  "photos": [
+   "assets/img/invictus/photo1.jpg",
+   "assets/img/invictus/photo2.jpg",
+   "assets/img/invictus/photo3.jpg",
+   "assets/img/invictus/photo4.jpg"
+  ]
+ },
+ "ics": {
+  "site": "https://www.ics.edu.hk",
+  "logo": "assets/img/ics/logo.jpg",
+  "photos": [
+   "assets/img/ics/photo1.jpg",
+   "assets/img/ics/photo2.jpg",
+   "assets/img/ics/photo3.jpg",
+   "assets/img/ics/photo4.jpg"
+  ]
+ },
+ "boxhill": {
+  "site": "https://www.boxhill.edu.hk",
+  "logo": "assets/img/boxhill/logo.jpg",
+  "photos": [
+   "assets/img/boxhill/photo1.jpg",
+   "assets/img/boxhill/photo2.jpg",
+   "assets/img/boxhill/photo3.jpg",
+   "assets/img/boxhill/photo4.jpg"
+  ]
+ },
+ "malvern": {
+  "site": "https://www.malvernpreschool.hk",
+  "logo": "assets/img/malvern/logo.jpg",
+  "photos": [
+   "assets/img/malvern/photo1.jpg",
+   "assets/img/malvern/photo2.jpg",
+   "assets/img/malvern/photo3.jpg",
+   "assets/img/malvern/photo4.jpg"
+  ]
+ },
+ "hka": {
+  "site": "https://www.hkacademy.edu.hk",
+  "logo": "assets/img/hka/logo.png",
+  "photos": [
+   "assets/img/hka/photo1.jpg",
+   "assets/img/hka/photo2.jpg",
+   "assets/img/hka/photo3.jpg",
+   "assets/img/hka/photo4.jpg"
+  ]
+ },
+ "mulberry": {
+  "site": "https://www.mulberryhousekg.com",
+  "logo": "assets/img/mulberry/logo.jpg",
+  "photos": [
+   "assets/img/mulberry/photo1.jpg",
+   "assets/img/mulberry/photo2.jpg",
+   "assets/img/mulberry/photo3.jpg",
+   "assets/img/mulberry/photo4.jpg"
+  ]
+ },
+ "ims": {
+  "site": "https://www.ims.edu.hk",
+  "logo": "assets/img/ims/logo.svg",
+  "photos": [
+   "assets/img/ims/photo1.jpg",
+   "assets/img/ims/photo2.jpg",
+   "assets/img/ims/photo3.jpg",
+   "assets/img/ims/photo4.jpg"
+  ]
+ },
+ "vic": {
+  "site": "https://www.victoria.edu.hk",
+  "logo": "assets/img/vic/logo.jpg",
+  "photos": [
+   "assets/img/vic/photo1.jpg",
+   "assets/img/vic/photo2.jpg",
+   "assets/img/vic/photo3.jpg"
+  ]
+ },
+ "kingston": {
+  "site": "https://www.kingston.edu.hk",
+  "logo": "assets/img/kingston/logo.jpg",
+  "photos": [
+   "assets/img/kingston/photo1.jpg",
+   "assets/img/kingston/photo2.jpg",
+   "assets/img/kingston/photo3.jpg"
+  ]
+ },
+ "stcat": {
+  "site": "https://www.stcatherines.edu.hk",
+  "logo": "assets/img/stcat/logo.svg",
+  "photos": [
+   "assets/img/stcat/photo1.jpg",
+   "assets/img/stcat/photo2.jpg",
+   "assets/img/stcat/photo3.jpg",
+   "assets/img/stcat/photo4.jpg"
+  ]
+ },
+ "searrogers": {
+  "site": "https://www.sris.edu.hk",
+  "logo": "assets/img/searrogers/logo.jpg",
+  "photos": [
+   "assets/img/searrogers/photo1.jpg",
+   "assets/img/searrogers/photo2.jpg",
+   "assets/img/searrogers/photo3.jpg"
+  ]
+ },
+ "zenith": {
+  "site": "https://zenithkindergarten.edu.hk",
+  "logo": "assets/img/zenith/logo.jpg",
+  "photos": [
+   "assets/img/zenith/photo1.jpg",
+   "assets/img/zenith/photo2.jpg",
+   "assets/img/zenith/photo3.jpg",
+   "assets/img/zenith/photo4.jpg"
+  ]
+ },
+ "greenfield": {
+  "site": "https://www.greenfield.edu.hk（当前 502，素材取自 GoodSchool 校页）",
+  "logo": "assets/img/greenfield/logo.jpg",
+  "photos": [
+   "assets/img/greenfield/photo1.jpg",
+   "assets/img/greenfield/photo2.jpg",
+   "assets/img/greenfield/photo3.jpg"
+  ]
+ }
+}

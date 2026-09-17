@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow">
+<script>(function(){var H="91f39d3ed5fbb8c4aafe0748b9f4a9de970658316cf5f40803e468a0211cdc37";try{if(localStorage.getItem("mdk")===H)return;localStorage.setItem("mdn",location.pathname);}catch(e){}location.replace("/login.html");})();</script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>居住成本与搬迁税务测算 · 深港决策</title><style>
+:root{--ink:#141a26;--mut:#66707f;--line:#e6eaf1;--good:#1e7e4a;--warn:#b25e09;--bad:#b02a2a;
+--bg:#f4f6f9;--card:#fff;--acc:#2b6cb0;--deep:#101725;--teal:#2c7a7b;--amber:#d69e2e;--violet:#6b46c1}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:20px 16px 72px}
+header.top{background:linear-gradient(135deg,#101725 0%,#1b2b45 60%,#23406b 100%);color:#fff;padding:34px 16px 30px}
+header.top .wrap{padding:0}
+header.top h1{font-size:21px;letter-spacing:.5px}
+header.top p{font-size:13px;opacity:.72;margin-top:6px}
+header.top .headline{font-size:16px;margin-top:14px;padding:12px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;backdrop-filter:blur(4px)}
+nav{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 16px;font-size:13px;position:sticky;top:0;z-index:9}
+nav a{color:var(--acc);text-decoration:none;margin-right:14px;white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px;margin:16px 0;box-shadow:0 1px 3px rgba(16,23,37,.05)}
+h2{font-size:16.5px;margin-bottom:12px;color:var(--deep);letter-spacing:.3px}
+h3{font-size:15px;margin:14px 0 6px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:#eef2f7;font-weight:600}
+ul{padding-left:20px} li{margin:4px 0;font-size:14px}
+.tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:12.5px;font-weight:600}
+.tag.good{background:#e3f3ea;color:var(--good)} .tag.warn{background:#fbeed7;color:var(--warn)} .tag.bad{background:#fbe3e3;color:var(--bad)}
+.mut{color:var(--mut);font-size:12.5px}
+img.chart{max-width:100%;border:1px solid var(--line);border-radius:14px;background:#fff}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+a{color:var(--acc)}
+.src li{font-size:12.5px;word-break:break-all}
+.kpi{font-size:26px;font-weight:700;color:var(--acc)}
+/* ---- 默会卡片系统 ---- */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 15px;font-size:13px;cursor:pointer;color:var(--mut);transition:all .18s ease;user-select:none}
+.chip:hover{transform:translateY(-1px);border-color:var(--acc)}
+.chip.on{background:var(--deep);color:#fff;border-color:var(--deep)}
+.chip b{font-weight:700}
+.chip .n{opacity:.55;font-size:11.5px;margin-left:4px}
+.pref{display:inline-flex;align-items:center;gap:6px;background:#eef2f9;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:12.5px;margin:3px 4px 0 0;color:#4a5568}
+.pref .dot{width:7px;height:7px;border-radius:50%;background:#63e6be}
+.pref .dot.open{background:#f6d365}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.sgrid{grid-template-columns:1fr}}
+.scard{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;border-left:5px solid var(--acc);transition:all .2s ease;position:relative;animation:rise .5s ease both}
+.scard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,23,37,.10);border-color:#cdd6e4}
+@keyframes rise{from{transform:translateY(10px)}to{transform:none}}
+.scard.g{border-left-color:var(--good)} .scard.w{border-left-color:var(--amber)} .scard.b{border-left-color:#c8ccd2}
+.scard .nm{font-size:15.5px;font-weight:700;color:var(--deep)}
+.scard .tr{font-size:12px;color:var(--mut);margin-top:2px}
+.scard .score{position:absolute;top:14px;right:16px;font-size:24px;font-weight:800;color:var(--acc);line-height:1}
+.scard .score small{display:block;font-size:10px;color:var(--mut);font-weight:400;text-align:right}
+.scard .vd{margin-top:8px;font-size:12.5px}
+.scard .fee{margin-top:6px;font-size:12.5px;color:var(--mut)}
+.bars{display:flex;gap:3px;margin-top:10px;height:6px}
+.bars i{flex:1;border-radius:3px;background:linear-gradient(90deg,var(--acc),#63b3ed);opacity:.85;display:block}
+.bars i.lo{background:#e2e8f0}
+.geo{margin-top:8px;font-size:11.5px;color:var(--mut);letter-spacing:2px}
+.geo b{color:var(--teal)}
+.lock{position:absolute;bottom:12px;right:14px;width:9px;height:9px;border-radius:50%;background:var(--amber);animation:breathe 2.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(214,158,46,.45)}50%{box-shadow:0 0 0 8px rgba(214,158,46,0)}}
+.xcard{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:8px 0;text-decoration:none;color:inherit;transition:all .18s}
+.xcard:hover{transform:translateX(4px);border-color:var(--acc)}
+.xcard .ar{color:var(--acc);font-size:17px}
+.dimbar{height:7px;border-radius:4px;background:#edf1f7;overflow:hidden;margin-top:2px}
+.dimbar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--teal),#63b3ed)}
+/* ---- 校徽与特点句 ---- */
+.shead{display:flex;gap:10px;align-items:center;padding-right:72px}
+.slogo{width:44px;height:44px;object-fit:contain;border-radius:10px;background:#fff;border:1px solid var(--line);flex:none;padding:3px}
+.slogo.big{width:56px;height:56px;padding:4px}
+.tagl{margin-top:8px;font-size:12.5px;color:var(--teal);font-weight:600;line-height:1.45}
+/* ---- 校园照片墙 ---- */
+.pwall{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pwall img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.pwall.n4 img:first-child{grid-column:span 2}
+@media(max-width:640px){.pwall{grid-template-columns:repeat(2,1fr)}.pwall.n4 img:first-child{grid-column:auto}}
+</style></head><body>
+<header class="top"><div class="wrap"><h1>居住成本与搬迁税务测算 · 深港决策</h1>
+<p>麦兜（2024.9.30 生）· 2027年9月入园全局调研 v2（第一性原则重构）｜ 数据核验截至 2026-09-05</p></div></header>
+<nav><a href="index.html">← 总览</a></nav>
+<div class="wrap">
+<div class="card"><h2>⚖️ 决策规则（结论先行；9/11 三档模型重算）</h2>
+<table>
+<tr><th>收入条件（家庭年化）</th><th>结论</th></tr>
+<tr><td><b>&lt; 72 万/年</b></td><td><b>留深圳</b>：家人留深、你跨境通勤（东铁线罗湖/福田→沙田约 40–50 分钟），或独自在港短住——大埔方案租金 ≤ 收入 40% 的可负担线即 72 万（基础档生活 57 万即可）</td></tr>
+<tr><td><b>72 万～税收平衡带</b></td><td>搬得起，但搬是<b>消费选择</b>：用 20.6–36.2 万/年增量成本（按生活水平）买双语环境与教育路径，值不值由家庭价值排序决定</td></tr>
+<tr><td><b>过税收平衡带（且六年规则触线）</b></td><td><b>搬家反而净省钱</b>——基础生活 ≈118 万、中等 ≈141 万、舒适 ≈174 万/年，越晚搬越亏。这就是"为了税收应该搬"的点</td></tr>
+<tr><td><b>六年规则未触线</b></td><td>两岸税负相同，任何收入下搬家都是消费选择，唯一财务闸门=可负担线（57/72/114 万按档）</td></tr>
+</table>
+<p class="mut">⚠️ 税务内容为框架性演算（汇率假设 1 HKD≈0.92 RMB），转制年申报须请跨境税务专业人士。<b>口径澄清（9/11 用户问）：纯税负维度（不计居住/学费增量成本），分支 A 下居港在任何收入水平都低于留深补差——省税没有收入起点，72 万即省约 12.2 万/年；平衡带是「省的税 ≥ 搬家年增量成本」的全账临界点，不是省税起点。</b>可复算脚本 tax_model.py（电脑本地版）（引擎与原税负表逐行核对一致）。完整论证：08 居住成本与租房选址分析（电脑本地版）、09 深港搬迁税务与决策测算（电脑本地版）。</p></div>
+
+<div class="card"><h2>💼 收入底座三情景</h2><p class="mut">此卡为机密口径，仅在电脑本地版展示。结论性口径已并入上方"决策规则"表：&lt;72 万留深；72 万～平衡带之间搬家是消费选择；过平衡带（基础 ≈118／中等 ≈141／舒适 ≈174 万）搬家净省钱。</p></div><div class="card"><h2>🏠 租金价格带（600–900 呎、楼龄约 10 年内；2026.6–9 放盘/成交口径）</h2>
+<table>
+<tr><th>区域</th><th>代表屋苑</th><th>600 呎月租带</th><th>900 呎月租带</th></tr>
+<tr><td>港岛·湾仔/中西区</td><td>壹环、KENNEDY 38 级</td><td><b>约 4–5 万</b></td><td><b>5.5–8 万</b></td></tr>
+<tr><td>港岛东（鰂鱼涌/北角）</td><td>Finnie、逸桦园</td><td>约 3.4–4 万</td><td>4.5–5.5 万</td></tr>
+<tr><td>九龙·启德</td><td>维港1号/Oasis/启德海湾</td><td>约 3.2–3.6 万</td><td>约 4.3–4.8 万</td></tr>
+<tr><td>新界东·大围站上盖</td><td>柏傲庄（682 呎 3 房 3.55 万）</td><td>约 3.2–3.6 万</td><td>约 4.5 万+</td></tr>
+<tr><td>新界东·沙田站</td><td>溱岸8号（729 呎 3.5 万）</td><td>约 3.3–3.5 万</td><td>约 4.5 万</td></tr>
+<tr><td><b>新界东·白石角（无港铁）</b></td><td>海日湾/云滙/嘉熙/逸珑湾（727 呎 3 房 2.38–2.5 万）</td><td><b>约 2.3–2.6 万</b></td><td><b>约 3–3.3 万</b></td></tr>
+<tr><td><b>新界东·马鞍山</b></td><td>迎海（3 房 795–988 呎 @约42）</td><td><b>约 2.4–2.8 万</b></td><td><b>约 3.3–4 万</b></td></tr>
+</table>
+<p class="mut">精修口径：「市区超 4 万」对港岛 600–900 呎全段成立、九龙（启德）仅 900 呎成立；「新界 2–3 万+」对非站上盖的白石角/马鞍山成立，大围/沙田站已"市区化"属例外。2026 租金处历史高位（逾 20 屋苑呎租破顶），用户确认 2027 市况续涨——预算已含上行 buffer，签约前按当时市况复核。</p></div>
+
+<div class="card"><h2>🧮 港岛方案 vs 大埔方案（固定开支测算）</h2>
+<table>
+<tr><th>方案</th><th>租金</th><th>学费摊</th><th>生活</th><th>固定开支/月</th><th>固定开支/年</th></tr>
+<tr><td>港岛方案（港岛东半新 2–3 房＋国际校档）</td><td>3.8 万</td><td>1.0 万</td><td>1.8 万</td><td><b>约 6.6 万</b></td><td><b>约 79 万</b></td></tr>
+<tr><td><b>大埔方案（白石角 3 房＋本地名幼/ESF 档）</b></td><td>2.4 万</td><td>0.7 万</td><td>1.6 万</td><td><b>约 4.7 万</b></td><td><b>约 56 万</b></td></tr>
+</table>
+<table>
+<tr><th>可负担线（租金占家庭月收入）</th><th>40% 稳健线</th><th>50% 上限线</th></tr>
+<tr><td>港岛方案（租金 3.8 万）</td><td>年薪约 <b>114 万</b></td><td>年薪约 <b>91 万</b>——"稳定年薪至少百万"恰落两线之间 ✓</td></tr>
+<tr><td>大埔方案（租金 2.4 万）</td><td>年薪约 <b>72 万</b>（基准情景月均 5.7 万已贴近）</td><td>—</td></tr>
+</table>
+<p class="mut">假设：三口之家基本生活 1.6–1.8 万/月；学费月摊=本地名幼档 0.7 万／国际校档 1–1.7 万。保守情景（1.5 万/月）下两方案都穿底，差额由积蓄填补——搬家时点必须挂收入闸门：滚动 3 个月 ≥5 万/月之前，家人不动。</p></div>
+
+<div class="card"><h2>🚇 通勤矩阵（东铁线过海段直达会展；时刻表口径近似值）</h2>
+<table>
+<tr><th>居住点 →</th><th>沙田</th><th>红磡</th><th>湾仔</th><th>尖沙咀</th><th>罗湖口岸</th></tr>
+<tr><td><b>大埔墟站（东铁线）</b></td><td>约 13 分</td><td>约 28 分</td><td>约 35 分（会展直达）</td><td>约 33 分</td><td><b>约 25 分直达</b></td></tr>
+<tr><td>白石角</td><td colspan="5">巴士/小巴＋港铁接驳：沙田 35–45 分 · 红磡 45–55 分 · 湾仔/尖沙咀 50–60 分 · 罗湖 40–50 分（用 10–20 分钟接驳换 25–30% 租金折让）</td></tr>
+<tr><td>马鞍山（屯马线）</td><td>约 20 分（大围转）</td><td>约 32 分直达</td><td>约 40 分</td><td><b>约 38 分直达尖东</b></td><td>约 50 分</td></tr>
+<tr><td>大围站（参照）</td><td>5 分</td><td>约 15 分</td><td>约 20 分</td><td>约 18 分</td><td>约 35 分</td></tr>
+</table>
+<p class="mut">业务以内地客群为主、需高频深港跑动——东铁线大埔墟段是唯一同时直挂 4 个办公点中 3 个＋罗湖口岸的居住带；马鞍山是尖沙咀权重高时的备选。办公点目前仅沙田周一早会固定，落点排序维持"沙田权重偏高"假设，明朗后复核。</p></div>
+
+<div class="card"><h2>📍 候选落点与学校集群</h2>
+<table>
+<tr><th>落点排序</th><th>理由</th></tr>
+<tr><td><b>大埔墟站沿线 ≥ 白石角 &gt; 马鞍山</b></td><td>东铁线一线串办公点＋罗湖；非站上盖屋苑租金折让 25–30%；深圳→香港"同预算面积腰斩"的落差在全市唯一能在 2.3–2.6 万拿到 700+ 呎 10 年内楼龄带会所的选项里最小化</td></tr>
+<tr><td>学校集群（大埔/白石角）</td><td>墨尔文主校（白石角·保 Prep 1 时间锁）／ICHK 康乐园 7.8／Mulberry 7.2</td></tr>
+<tr><td>学校集群（马鞍山）</td><td>学之园迎海（本地线第一优先）／Box Hill／ESF 乌溪沙（双轨第一优先）</td></tr>
+<tr><td>免费线兜底</td><td>采样本就在新界东，落点与兜底名单天然重合</td></tr>
+</table>
+<p class="mut">策略不变：以录取学校定居住地——大埔/马鞍山带的可录取学校密度本身最高，GEO 弹性分最高的学校（ESF 乌溪沙、学之园、VEO 多校区）都在这条线上。若最终录取落港岛校（VEO 铜锣湾系/IMS 西湾河/CDNIS 黄竹坑），住大埔需校车或 40–60 分钟接送。</p></div>
+
+<div class="card"><h2>📝 签约纪律与时点链条</h2>
+<table>
+<tr><th>项目</th><th>口径</th></tr>
+<tr><td><b>签约 upfront ≈ 8.4 万</b></td><td>两押一付（4.8 万＋2.4 万）＋半月佣金 1.2 万（大埔方案 2.4 万/月）；预缴可谈，目标压到 0–3 个月，每多预缴 1 个月 +2.4 万；积蓄侧按 8.4–15.6 万预留</td></tr>
+<tr><td><b>租约结构</b></td><td>2027 Q4 继续门验证前只签一年生约（或死约 ≤12 个月的一死一生）；拒绝两年死约；租金上行期续租可能加 5–10%，预算留 buffer</td></tr>
+<tr><td><b>时点链条</b></td><td>10/6 取《登记事项证明书》→ 罗湖递件 → 预计 2026.12–2027.1 批出 → 批出后 1–2 个月短租过渡、同步确认办公点出勤权重 → 再签长约，目标 2027 Q2 落定、衔接 K1 2027.9 开学</td></tr>
+<tr><td><b>学费承诺时点</b></td><td>高价位学校（20 万首年档）承诺性支出落在 2027 Q4 继续门之后；8–9 万档（ESF/VEO/学之园）全情景可负担，不构成约束</td></tr>
+</table></div>
+
+<div class="card"><h2>🧾 税务居民现状：183 天规则 × 六年规则</h2>
+<table>
+<tr><th>层级</th><th>口径</th></tr>
+<tr><td><b>居民身份（2026 年度）</b></td><td>香港永居、无内地户籍=税法"无住所个人"，身份看天数不看户口：一个纳税年度境内累计满 183 天=居民个人。常年以深圳为家（大概率 300+ 天）→ <b>2026 年度几乎肯定是内地居民个人</b>（财政部税务总局公告 2019 年第 34 号）</td></tr>
+<tr><td><b>24 小时口径（极有利）</b></td><td>境内停留当天满 24 小时才计 1 天——住香港后每天跨境到深圳上班，当天往返=境内 0 天，只需控制过夜天数</td></tr>
+<tr><td><b>六年规则</b></td><td>无住所个人此前六年（2019 起算）每年满 183 天且任一年无单次离境 &gt;30 天 → 第六年起境外所得全额在内地纳税；不满六年经备案，境外支付的境外所得免征内地个税</td></tr>
+</table>
+<table>
+<tr><th></th><th>分支 A：六年已触线</th><th>分支 B：仍有豁免空间</th></tr>
+<tr><td><b>条件</b></td><td>2019–2024 每年境内 ≥183 天，且无任一年单次离境 &gt;30 天</td><td>任一年 &lt;183 天，或有单次离境 &gt;30 天（清零重算）</td></tr>
+<tr><td><b>含义</b></td><td>2025 年起境外所得理论上已在内地税网（未申报≠不欠，只是未稽核）</td><td>经备案，香港收入继续免内地税</td></tr>
+<tr><td><b>对决策</b></td><td>住深圳≈按内地税率补差（18–37%），搬迁税收平衡带 118–174 万（中等 ≈141 万）</td><td>住深圳只缴香港税，搬家纯消费选择</td></tr>
+</table>
+<p class="mut">【待办】拉出入境记录逐年核对（国家移民管理局小程序可导出），这是整本账的第一个分叉点。【待专业确认】香港保险佣金的所得来源地认定：展业涉及跨境（内地客群），若被认定部分境内来源，则无论六年规则状态如何都须在内地纳税。</p></div>
+
+<div class="card"><h2>💰 三档收入双边税负对比（已婚＋1 子全额由你申索）</h2>
+<table>
+<tr><th>年收入（HKD）</th><th>居港总税（扣租金 12 万）</th><th>有效税率</th><th>留深总税（六年触线口径）</th><th>有效税率</th><th>搬迁年节税</th></tr>
+<tr><td>72 万</td><td>约 0.9 万</td><td>1.3%</td><td>约 13.1 万</td><td>18.2%</td><td><b>约 12.2 万</b></td></tr>
+<tr><td>100 万</td><td>约 5.5 万</td><td>5.5%</td><td>约 22.5 万</td><td>22.5%</td><td><b>约 16.9 万</b></td></tr>
+<tr><td>150 万</td><td>约 14.0 万</td><td>9.4%</td><td>约 43.6 万</td><td>29.1%</td><td><b>约 29.6 万</b></td></tr>
+<tr><td>200 万</td><td>约 22.5 万</td><td>11.3%</td><td>约 66.1 万</td><td>33.1%</td><td><b>约 43.6 万</b></td></tr>
+<tr><td>300 万</td><td>约 39.5 万</td><td>13.2%</td><td>约 111.1 万</td><td>37.0%</td><td><b>约 71.6 万</b></td></tr>
+</table>
+<p class="mut">香港薪俸税参数：已婚免税额 29 万＋子女 14 万、累进 2–17% 与标准税率 15% 取低、强积金扣除上限 1.8 万、住宅租金扣除最高 12 万（麦兜 2024.9 生符合额外 2 万资格，须实际同住 ≥6 个月）。<b>要点：住深圳 ≠ 避税</b>——六年触线后内地按全球所得补差，合计税负≈内地税率。</p></div>
+
+<div class="card"><h2>🏙️ 双城三档生活成本（9/11 模型）</h2>
+<p class="mut">月支出明细：租金＋学费摊月＋生活费。深圳为 RMB、香港为 HKD；年合计已按汇率 0.92 折算为 HKD。</p>
+<table>
+<tr><th>档位</th><th>深圳/月（RMB）</th><th>香港/月（HKD）</th><th>深圳年支出</th><th>香港年支出</th><th>搬家年增量</th></tr>
+<tr><td><b>基础</b></td><td>6,000 租＋1,500 普惠园＋8,000 生活</td><td>19,000 大埔/粉岭 2 房＋1,000 学券园＋14,000</td><td>20.2 万</td><td>40.8 万</td><td><b>+20.6 万</b></td></tr>
+<tr><td><b>中等（现状锚）</b></td><td>8,000 租＋2,500 双语私立＋12,000</td><td>24,000 白石角 3 房＋7,100（8.5 万档：VEO/学之园/ESF）＋16,000</td><td>29.3 万</td><td>56.5 万</td><td><b>+27.2 万</b></td></tr>
+<tr><td><b>舒适</b></td><td>12,000 租＋8,300 国际园＋15,000</td><td>38,000 港岛东半新＋12,500（15 万档国际校）＋18,000</td><td>46.0 万</td><td>82.2 万</td><td><b>+36.2 万</b></td></tr>
+</table></div>
+
+<div class="card"><h2>🎯 临界点账：搬家增量成本 vs 税收差（三档口径）</h2>
+<table>
+<tr><th>档位</th><th>搬家年增量</th><th>可负担线（租金≤收入40%）</th><th>税收平衡带（分支A）</th></tr>
+<tr><td><b>基础</b></td><td>+20.6 万/年</td><td>≈57 万</td><td><b>≈118 万</b></td></tr>
+<tr><td><b>中等</b></td><td>+27.2 万/年</td><td>≈72 万</td><td><b>≈141 万</b></td></tr>
+<tr><td><b>舒适</b></td><td>+36.2 万/年</td><td>≈114 万</td><td><b>≈174 万</b></td></tr>
+</table>
+<ul>
+<li><b>分支 A（六年触线）：临界点是一条带 118–174 万/年，随生活水平滑动</b>（原单一估计 155 万即带的中枢偏上）。参照点：155 万时节税 31.0 万；200 万时净省约 12.6 万/年；300 万时净省约 40.6 万/年（均对中等档）。过带后搬家净省钱，越晚搬越亏——这就是"为了税收应该搬"的点。</li>
+<li><b>纯税务口径（9/11 用户问）</b>：不计生活增量时，分支 A 下居港在任何收入水平都低于留深补差——省税没有收入起点，72 万即省约 12.2 万/年；平衡带是"省的税 ≥ 搬家年增量成本"的全账口径，不是省税起点。</li>
+<li><b>分支 B（未触线）：无税收临界点</b>，唯一闸门=可负担线（57/72/114 万按档）。</li>
+<li>假设输入（深圳租金 6K/8K/12K RMB、学费档、生活费、汇率 0.92）变动时平衡带随之浮动，改 tax_model.py（电脑本地版） 参数随时重跑；决策前按当时数复核。</li>
+</ul></div>
+
+<div class="card"><h2>🪜 三阶段 Sequencing</h2>
+<table>
+<tr><th>阶段</th><th>时间</th><th>动作</th><th>财务纪律</th></tr>
+<tr><td><b>① 跨境铺垫</b></td><td>现在–2026.12</td><td>家人留深；你以 HK PR 身份随时开始香港工作，跨境通勤或按需短住；不背双房租</td><td>现金最薄期；同步拉出入境记录定六年规则状态、约跨境税务师</td></tr>
+<tr><td><b>② 切换年启动</b></td><td>2027 Q1–Q2</td><td>证件批出＋滚动 3 个月收入 ≥5 万/月 → 全家搬港；upfront 约 8.4 万</td><td>2027 全年内地 &lt;183 天（搬家后自然达标）；只签一年生约</td></tr>
+<tr><td><b>③ 验证与升级</b></td><td>2027 Q4 起</td><td>第一道继续门（累计 FYC 55 万）见分晓 → 定长租结构、是否锁高价位学校；麦兜 K1 2027.9 入学</td><td>达标前不签两年死约、不承诺 20 万/年级学费</td></tr>
+</table>
+<p class="mut">先自己过去 vs 尽早过去：<b>推荐折中——你先行（现在就可以），家人挂证件＋收入双闸门</b>。退路：2027 Q4 继续门未达 → 家人继续留深（租约到期不续），你独自在港或跨境，损失上限=一年租约。切换年建议=2027 自然年（2026 已大半年在内地，当年身份无法改变）。</p></div>
+
+<div class="card"><h2>✅ 待核实清单</h2>
+<table>
+<tr><th>#</th><th>事项</th><th>影响</th><th>谁来做</th></tr>
+<tr><td>1</td><td>2019–2024 逐年境内天数＋单次离境记录</td><td>六年规则分支 A/B，决定整个税收框架</td><td>你（移民局小程序导出）</td></tr>
+<tr><td>2</td><td>香港保险佣金的所得来源地认定</td><td>若部分被认定境内来源，任何状态下都须在内地纳税</td><td>跨境税务师</td></tr>
+<tr><td>3</td><td>2027 转制年备案、内地汇算与香港首年申报</td><td>合规落地</td><td>跨境税务师</td></tr>
+<tr><td>4</td><td>内地社保暂停/保留</td><td>实务安排</td><td>跨境税务师/社保局</td></tr>
+<tr><td>5</td><td>租金扣除 12 万资格（麦兜同住 ≥6 个月/年）</td><td>居港税负每年约 2 万差别</td><td>搬家后自然满足，留存租约与住址证明</td></tr>
+<tr><td>6</td><td>汇率 0.92、深圳租金 8K、学费差 5.5 万等输入</td><td>临界点 ±10–15 万浮动</td><td>决策前按当时数复核</td></tr>
+</table>
+<p class="mut">数据源：GovHK 薪俸税口径（2026/27）、财政部税务总局公告 2019 年第 34/35 号、内地综合所得税率表；租金数据源（Yahoo/利嘉阁/TVB/宅谷/中原/PropMark/经济日报等 2026.2–8）逐条见 08 文件第八节（电脑本地版）。as-of 2026-09-09。</p></div>
+</div></body></html>
