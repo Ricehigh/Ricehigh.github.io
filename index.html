@@ -57,6 +57,11 @@ a{color:var(--acc)}
 .bars i.lo{background:#e2e8f0}
 .geo{margin-top:8px;font-size:11.5px;color:var(--mut);letter-spacing:2px}
 .geo b{color:var(--teal)}
+/* ---- 可打勾清单 ---- */
+.todo{list-style:none;padding-left:0}
+.todo li{display:flex;gap:9px;align-items:flex-start;font-size:14px}
+.todo input[type=checkbox]{margin-top:5px;width:16px;height:16px;flex:none;accent-color:var(--teal)}
+.todo li.done{opacity:.5;text-decoration:line-through}
 .lock{position:absolute;bottom:12px;right:14px;width:9px;height:9px;border-radius:50%;background:var(--amber);animation:breathe 2.4s ease-in-out infinite}
 @keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(214,158,46,.45)}50%{box-shadow:0 0 0 8px rgba(214,158,46,0)}}
 .xcard{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:8px 0;text-decoration:none;color:inherit;transition:all .18s}
@@ -193,6 +198,35 @@ a{color:var(--acc)}
 <tr><td>9/9–9/11 第三批</td><td>HKA</td><td><b>HKA 9/20 书面（Joann）：严格执行 8.31 cutoff、无例外</b>——路径：2026/27 可进 Playgroup（满 24 个月）、2027/28 续 Playgroup、<b>2028/29 才进 Pre-K 1</b>（申请 2027 秋开闸，提前 12–18 个月）；证件可先递申请、正式注册前补齐 ✓；<b>校方主动提议 10/12（周一）Playgroup 试课（用户 9/21 拍板：去）</b>。定位维持期权层/2028 线</td></tr>
 </table></div>
 <p class="mut">孩子在校方系统注册名：<b>Yaonan</b>（ICHK 与 Malvern 两校来信一致，2026-09-21 确认）。</p>
+
+<h3>✅ 递表材料清单（可打勾；按死线排序）</h3>
+<div class="card" style="margin:10px 0"><h2>① ESF 中央申请 · 9/30 硬死线</h2>
+<p class="mut">第一志愿已定：<b>西沙启新书院幼稚园</b>（直通 RCHK Y1–Y13；提交不可改）。校方书面口径：申请只需护照＋出生证，住址证明与孩子签证可后补。</p>
+<ul class="todo">
+<li><input type="checkbox"><span>孩子护照（现有证件扫描件）</span></li>
+<li><input type="checkbox"><span>出生证</span></li>
+<li><input type="checkbox"><span>申请费 1,500（2026.9 起口径）</span></li>
+<li><input type="checkbox"><span>第一志愿＝西沙启新书院幼稚园（提交前再默念一遍：不可改）</span></li>
+<li><input type="checkbox"><span>香港住址证明 ×2（迁港后补，校方书面同意）</span></li>
+<li><input type="checkbox"><span>孩子签证/永居证明（开学前交）</span></li>
+</ul></div>
+<div class="card" style="margin:10px 0"><h2>② ICHK Nursery · 即递（面试预计 11 月）</h2>
+<p class="mut">校方 9/21 书面建议即递；网申 ichkhly.edu.hk。</p>
+<ul class="todo">
+<li><input type="checkbox"><span>网上申请表提交</span></li>
+<li><input type="checkbox"><span>申请费约 236 美元＋评估费约 102 美元</span></li>
+<li><input type="checkbox"><span>孩子护照/出生证（常规项，以网申表列明为准）</span></li>
+<li><input type="checkbox"><span>校车意向（路线表已核实存档；入学后登记）</span></li>
+</ul></div>
+<div class="card" style="margin:10px 0"><h2>③ 墨尔文 PN 第一阶段 · 10/13 硬死线</h2>
+<p class="mut">校方 9/21 书面：10/13 前交齐申请＋<b>全部支持文件</b>；体验课 10/24；12/11 出结果。</p>
+<ul class="todo">
+<li><input type="checkbox"><span>网上申请提交（校区偏好待 10/10 CC 开放日后定）</span></li>
+<li><input type="checkbox"><span>支持文件按申请表清单备齐（护照/出生证/证件照为常规项）</span></li>
+<li><input type="checkbox"><span>证件办理中状态书面说明（OWP 进行中；该校未书面确认可后补，递交时主动问一句）</span></li>
+<li><input type="checkbox"><span>10/24 Interactive Experience Session 出席</span></li>
+</ul></div>
+<script>document.querySelectorAll('.todo input').forEach(function(c,i){var k='td_'+location.pathname+'_'+i;try{c.checked=localStorage.getItem(k)==='1';}catch(e){}c.addEventListener('change',function(){try{localStorage.setItem(k,c.checked?'1':'0');}catch(e){}});});</script>
 <h3>参观日历（均需网上预约）</h3>
 <div class="tscroll"><table>
 <tr><th>日期</th><th>场次</th></tr>

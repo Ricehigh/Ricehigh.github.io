@@ -57,6 +57,11 @@ a{color:var(--acc)}
 .bars i.lo{background:#e2e8f0}
 .geo{margin-top:8px;font-size:11.5px;color:var(--mut);letter-spacing:2px}
 .geo b{color:var(--teal)}
+/* ---- 可打勾清单 ---- */
+.todo{list-style:none;padding-left:0}
+.todo li{display:flex;gap:9px;align-items:flex-start;font-size:14px}
+.todo input[type=checkbox]{margin-top:5px;width:16px;height:16px;flex:none;accent-color:var(--teal)}
+.todo li.done{opacity:.5;text-decoration:line-through}
 .lock{position:absolute;bottom:12px;right:14px;width:9px;height:9px;border-radius:50%;background:var(--amber);animation:breathe 2.4s ease-in-out infinite}
 @keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(214,158,46,.45)}50%{box-shadow:0 0 0 8px rgba(214,158,46,0)}}
 .xcard{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:8px 0;text-decoration:none;color:inherit;transition:all .18s}
