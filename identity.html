@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow">
+<script>(function(){var H="91f39d3ed5fbb8c4aafe0748b9f4a9de970658316cf5f40803e468a0211cdc37";try{if(localStorage.getItem("mdk")===H)return;localStorage.setItem("mdn",location.pathname);}catch(e){}location.replace("/login.html");})();</script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>身份线 · 单程证与永居核实</title><style>
+:root{--ink:#141a26;--mut:#66707f;--line:#e6eaf1;--good:#1e7e4a;--warn:#b25e09;--bad:#b02a2a;
+--bg:#f4f6f9;--card:#fff;--acc:#2b6cb0;--deep:#101725;--teal:#2c7a7b;--amber:#d69e2e;--violet:#6b46c1}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:20px 16px 72px}
+header.top{background:linear-gradient(135deg,#101725 0%,#1b2b45 60%,#23406b 100%);color:#fff;padding:34px 16px 30px}
+header.top .wrap{padding:0}
+header.top h1{font-size:21px;letter-spacing:.5px}
+header.top p{font-size:13px;opacity:.72;margin-top:6px}
+header.top .headline{font-size:16px;margin-top:14px;padding:12px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;backdrop-filter:blur(4px)}
+nav{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 16px;font-size:13px;position:sticky;top:0;z-index:9}
+nav a{color:var(--acc);text-decoration:none;margin-right:14px;white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px;margin:16px 0;box-shadow:0 1px 3px rgba(16,23,37,.05)}
+h2{font-size:16.5px;margin-bottom:12px;color:var(--deep);letter-spacing:.3px}
+h3{font-size:15px;margin:14px 0 6px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:#eef2f7;font-weight:600}
+ul{padding-left:20px} li{margin:4px 0;font-size:14px}
+.tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:12.5px;font-weight:600}
+.tag.good{background:#e3f3ea;color:var(--good)} .tag.warn{background:#fbeed7;color:var(--warn)} .tag.bad{background:#fbe3e3;color:var(--bad)}
+.mut{color:var(--mut);font-size:12.5px}
+img.chart{max-width:100%;border:1px solid var(--line);border-radius:14px;background:#fff}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+a{color:var(--acc)}
+.src li{font-size:12.5px;word-break:break-all}
+.kpi{font-size:26px;font-weight:700;color:var(--acc)}
+/* ---- 默会卡片系统 ---- */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 15px;font-size:13px;cursor:pointer;color:var(--mut);transition:all .18s ease;user-select:none}
+.chip:hover{transform:translateY(-1px);border-color:var(--acc)}
+.chip.on{background:var(--deep);color:#fff;border-color:var(--deep)}
+.chip b{font-weight:700}
+.chip .n{opacity:.55;font-size:11.5px;margin-left:4px}
+.pref{display:inline-flex;align-items:center;gap:6px;background:#eef2f9;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:12.5px;margin:3px 4px 0 0;color:#4a5568}
+.pref .dot{width:7px;height:7px;border-radius:50%;background:#63e6be}
+.pref .dot.open{background:#f6d365}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.sgrid{grid-template-columns:1fr}}
+.scard{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;border-left:5px solid var(--acc);transition:all .2s ease;position:relative;animation:rise .5s ease both}
+.scard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,23,37,.10);border-color:#cdd6e4}
+@keyframes rise{from{transform:translateY(10px)}to{transform:none}}
+.scard.g{border-left-color:var(--good)} .scard.w{border-left-color:var(--amber)} .scard.b{border-left-color:#c8ccd2}
+.scard .nm{font-size:15.5px;font-weight:700;color:var(--deep)}
+.scard .tr{font-size:12px;color:var(--mut);margin-top:2px}
+.scard .score{position:absolute;top:14px;right:16px;font-size:24px;font-weight:800;color:var(--acc);line-height:1}
+.scard .score small{display:block;font-size:10px;color:var(--mut);font-weight:400;text-align:right}
+.scard .vd{margin-top:8px;font-size:12.5px}
+.scard .fee{margin-top:6px;font-size:12.5px;color:var(--mut)}
+.scard .dl{margin-top:5px;font-size:12px;font-weight:600;line-height:1.4}
+.scard .dl.hot{color:var(--warn)}
+.scard .dl.calm{color:var(--mut);font-weight:400}
+.bars{display:flex;gap:3px;margin-top:10px;height:6px}
+.bars i{flex:1;border-radius:3px;background:linear-gradient(90deg,var(--acc),#63b3ed);opacity:.85;display:block}
+.bars i.lo{background:#e2e8f0}
+.geo{margin-top:8px;font-size:11.5px;color:var(--mut);letter-spacing:2px}
+.geo b{color:var(--teal)}
+/* ---- 可打勾清单 ---- */
+.todo{list-style:none;padding-left:0}
+.todo li{display:flex;gap:9px;align-items:flex-start;font-size:14px}
+.todo input[type=checkbox]{margin-top:5px;width:16px;height:16px;flex:none;accent-color:var(--teal)}
+.todo li.done{opacity:.5;text-decoration:line-through}
+.lock{position:absolute;bottom:12px;right:14px;width:9px;height:9px;border-radius:50%;background:var(--amber);animation:breathe 2.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(214,158,46,.45)}50%{box-shadow:0 0 0 8px rgba(214,158,46,0)}}
+.xcard{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:8px 0;text-decoration:none;color:inherit;transition:all .18s}
+.xcard:hover{transform:translateX(4px);border-color:var(--acc)}
+.xcard .ar{color:var(--acc);font-size:17px}
+.dimbar{height:7px;border-radius:4px;background:#edf1f7;overflow:hidden;margin-top:2px}
+.dimbar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--teal),#63b3ed)}
+/* ---- 校徽与特点句 ---- */
+.shead{display:flex;gap:10px;align-items:center;padding-right:72px}
+.slogo{width:44px;height:44px;object-fit:contain;border-radius:10px;background:#fff;border:1px solid var(--line);flex:none;padding:3px}
+.slogo.big{width:56px;height:56px;padding:4px}
+.tagl{margin-top:8px;font-size:12.5px;color:var(--teal);font-weight:600;line-height:1.45}
+/* ---- 校园照片墙 ---- */
+.pwall{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pwall img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.pwall.n4 img:first-child{grid-column:span 2}
+@media(max-width:640px){.pwall{grid-template-columns:repeat(2,1fr)}.pwall.n4 img:first-child{grid-column:auto}}
+/* ---- iPhone/移动端适配：防溢出、横向可滚、字号收紧 ---- */
+@media(max-width:640px){
+  body{line-height:1.65}
+  .wrap{padding:14px 12px 56px}
+  header.top{padding:26px 12px 22px}
+  header.top h1{font-size:19px}
+  header.top .headline{font-size:14.5px;padding:10px 13px}
+  nav{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  .card{padding:14px 13px;margin:12px 0;border-radius:14px}
+  h2{font-size:15.5px}
+  table{font-size:12.5px}
+  th,td{padding:6px 7px;min-width:0}
+  th:first-child,td:first-child{min-width:4.5em}
+  .tscroll{margin:8px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .tscroll table{min-width:340px}
+  .tscroll.w4 table{min-width:540px}
+  .tscroll.w6 table{min-width:680px}
+  ul{padding-left:18px}
+  li{font-size:13.5px}
+  img{max-width:100%;height:auto}
+  .kpi{font-size:22px}
+  .scard{padding:14px 13px 12px}
+  .scard .nm{font-size:14.5px}
+  .scard .score{font-size:21px;top:12px;right:13px}
+  .shead{padding-right:60px}
+  .xcard{padding:12px 13px}
+  .xcard span{min-width:0}
+  .chips{gap:6px}
+  .chip{padding:6px 12px;font-size:12.5px}
+}
+</style></head><body>
+<header class="top"><div class="wrap"><h1>身份线 · 单程证与永居核实</h1>
+<p>麦兜（2024.9.30 生）· 2027年9月入园全局调研 v2（第一性原则重构）｜ 数据核验截至 2026-09-05</p><div class="headline">路径 A 夫妻团聚偕行（2–3 个月落地）＋ 路径 B 永居子女 CoE（批下即永居）＋ ROP145 到港核实（追问中）｜ 更新至 2026-10-13</div></div></header>
+<nav><a href="index.html">← 总览</a></nav>
+<div class="wrap">
+<div class="card"><h2>📌 当前位置（2026-10-13）</h2>
+<ul>
+<li><b>两份香港证明已齐</b>：婚姻状况证明书（8/30 婚姻登记处当场办结）＋ 登记事项证明书（10/10 屯门取件）✅</li>
+<li><b>ROP145 首封询问邮件 10/13 获入境处书面回复</b>：确认麦兜符合 CoE（居留权证明书）资格；但"偕行到港后能否即交 ROP145"未作答，追问邮件已起草</li>
+<li><b>下一步</b>：罗湖出入境递件（两份证明开出日起 6 个月有效，<b>2027 年 2 月底前必须递</b>）</li>
+</ul></div>
+
+<div class="card"><h2>⚖️ 两条路线对比（外加到港核实）</h2>
+<div class="tscroll w4"><table>
+<tr><th></th><th>路径 A：夫妻团聚＋偕行子女</th><th>路径 B：永居子女（CoE）</th><th>ROP145 到港核实</th></tr>
+<tr><td><b>适用条件</b></td><td>夫妻一方香港永居；偕行未成年子女（太太主申请、麦兜偕行）</td><td>中国籍、港外出生、出生时父/母为香港出生的中国公民（或连续通常居港 ≥7 年）——麦兜符合（入境处 10/13 书面确认）</td><td>到港合法逗留后核实永居资格</td></tr>
+<tr><td><b>递交地点</b></td><td>深圳罗湖出入境（户籍所在地）</td><td><b>同样在罗湖</b>（公安初审→转入境处核实；10/13 书面确认）</td><td>香港入境处（湾仔 25 楼居留权组）</td></tr>
+<tr><td><b>审批时长</b></td><td>深圳侧 40 个工作日＋香港侧衔接，合计约 2–3 个月（预计 2026.12–2027.1 批出）</td><td>1–2 年（深圳侧口径）</td><td>约 6 周（若能受理）</td></tr>
+<tr><td><b>批出结果</b></td><td>单程证 → 香港居民身份证（<b>非永居</b>）</td><td>CoE 贴单程证，<b>批下即永居</b> → 可即办特区护照</td><td>核实成功即换永居身份证 → 可办特区护照</td></tr>
+<tr><td><b>材料</b></td><td>两份香港证明（6 个月有效）＋双方证件＋孩子出生证/身份证/户口本＋照片＋香港通讯地址</td><td>出生证＋居住地身份证明＋有效旅行证件＋父母永居身份证＋结婚证；<b>或需亲子鉴定（ID947）</b></td><td>待追问邮件答复</td></tr>
+<tr><td><b>状态</b></td><td>材料已齐，待递（罗湖七问当面问）</td><td>资格确认；能否与 A 并行=罗湖七问第一问</td><td>追问邮件已起草待发</td></tr>
+</table></div>
+<p class="mut">⚠️ 批出单程证＝注销内地户口，不可逆；与太太的户口共识须在出发前达成。移民政策以官方书面为准，口头答复不作准。</p></div>
+
+<div class="card"><h2>🧭 路径 A 全流程时间线</h2>
+<div class="tscroll"><table>
+<tr><th>节点</th><th>状态</th></tr>
+<tr><td>8/30 婚姻登记处开《婚姻状况证明书》＋屯门递交《登记事项证明书》申请</td><td>✅ 已办</td></tr>
+<tr><td>10/10 屯门取件</td><td>✅ 已办</td></tr>
+<tr><td>ROP145 询问邮件（10/13 获复：CoE 资格确认、ROP145 未答）→ 追问邮件</td><td>🟡 进行中</td></tr>
+<tr><td><b>罗湖出入境递件</b>（七问当面问，第一问=两类别能否同时递）</td><td>⏳ 下一步（2027.2 前）</td></tr>
+<tr><td>审批（深圳侧 40 个工作日＋香港侧衔接）</td><td>⏳ 预计 2026.12–2027.1 批出</td></tr>
+<tr><td>注销内地户口 → 单程证赴港 → 领香港居民身份证（非永居）</td><td>⏳ 批出后按期赴港</td></tr>
+<tr><td>麦兜 ROP145 核实永居（若受理）</td><td>⏳ 兜底：7 年自然转（约 2033，10 岁前）</td></tr>
+<tr><td>核实成功 → 换永居身份证 → 办特区护照</td><td>⏳</td></tr>
+</table></div></div>
+
+<div class="card"><h2>📋 递件材料清单（罗湖窗口）</h2>
+<ul>
+<li>婚姻状况证明书＋登记事项证明书（两份 6 个月有效）</li>
+<li>太太：内地身份证＋户口本＋证件照（规格按窗口）</li>
+<li>你：香港身份证＋回乡证＋特区护照</li>
+<li>麦兜：出生医学证明＋内地身份证＋户口本＋证件照</li>
+<li>香港通讯地址（邮寄地址必须是香港地址）</li>
+<li>偕行子女补充材料（出生公证/父子关系证明等）以窗口最新清单为准</li>
+<li>填报三要点：国籍写"中国"；姓名拼音/出生日期/身份证号与香港身份证逐字一致；通讯地址用香港地址</li>
+</ul>
+<p class="mut">罗湖七问第一问（能否同时递交 A＋B）：若可并行，B 线零成本排队作保险——批下即永居。</p></div>
+
+<div class="card"><h2>🏫 对学校的意义（quota 分析）</h2>
+<ul>
+<li><b>2027 入学不卡身份</b>：7 校书面一致确认申请阶段不需要香港身份，注册前补齐即可（ESF/CDNIS/SIS/ASHK/Invictus/墨尔文/弘立，2026.9 书面）</li>
+<li><b>差别在优先权与配额</b>：ESF 西沙启新书院幼稚园明牌"RCK 优先权给 HKPR 持有者"（9/29 书面）——永居文件批出后立即邮件补交触发优先权；部分国际校优先项含外国护照（与永居无关，不适用我们）</li>
+<li><b>HKSAR 护照配额的影响在 2028+</b>：CoE 审批 1–2 年，大概率赶不上 2027.9 开学，但 2028 线学校（HKA PreK、思贝礼 Nursery）申请期在 2027 秋–2028，若届时永居已核实＋特区护照在手，配额/优先权排序更占优</li>
+<li><b>结论</b>：2027 入学靠居民身份证即可，别把 CoE 当 2027 的前置条件；CoE/ROP145 的价值在 2028+ 入学排序和长期身份（特区护照 170+ 免签）</li>
+</ul></div>
+
+<div class="card"><h2>❓ 未决问题</h2>
+<ul>
+<li>ROP145 到港即交能否受理（追问邮件已起草）</li>
+<li>罗湖七问：两类别并行/分数线书面口径/偕行材料清单/"回港付费资料"/时限承诺/户口注销时点/证明有效期算法（原文见 01 身份规划线文件第八节）</li>
+<li>与太太谈深圳户口注销共识（出发前）</li>
+</ul>
+<p class="mut">本页为家庭内部规划笔记；移民/身份政策只讲公开信息与书面口径，不承诺结果。详细论证见工作区 01_身份规划线.md 与 参考文档/身份事务_入境处ROP145邮件与罗湖问题清单.md。</p></div>
+</div></body></html>
