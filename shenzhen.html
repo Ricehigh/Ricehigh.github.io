@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow">
+<script>(function(){var H="91f39d3ed5fbb8c4aafe0748b9f4a9de970658316cf5f40803e468a0211cdc37";try{if(localStorage.getItem("mdk")===H)return;localStorage.setItem("mdn",location.pathname);}catch(e){}location.replace("/login.html");})();</script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>深圳过渡年 · 2027/28 幼儿园调研</title><style>
+:root{--ink:#141a26;--mut:#66707f;--line:#e6eaf1;--good:#1e7e4a;--warn:#b25e09;--bad:#b02a2a;
+--bg:#f4f6f9;--card:#fff;--acc:#2b6cb0;--deep:#101725;--teal:#2c7a7b;--amber:#d69e2e;--violet:#6b46c1}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:20px 16px 72px}
+header.top{background:linear-gradient(135deg,#101725 0%,#1b2b45 60%,#23406b 100%);color:#fff;padding:34px 16px 30px}
+header.top .wrap{padding:0}
+header.top h1{font-size:21px;letter-spacing:.5px}
+header.top p{font-size:13px;opacity:.72;margin-top:6px}
+header.top .headline{font-size:16px;margin-top:14px;padding:12px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;backdrop-filter:blur(4px)}
+nav{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 16px;font-size:13px;position:sticky;top:0;z-index:9}
+nav a{color:var(--acc);text-decoration:none;margin-right:14px;white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px;margin:16px 0;box-shadow:0 1px 3px rgba(16,23,37,.05)}
+h2{font-size:16.5px;margin-bottom:12px;color:var(--deep);letter-spacing:.3px}
+h3{font-size:15px;margin:14px 0 6px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:#eef2f7;font-weight:600}
+ul{padding-left:20px} li{margin:4px 0;font-size:14px}
+.tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:12.5px;font-weight:600}
+.tag.good{background:#e3f3ea;color:var(--good)} .tag.warn{background:#fbeed7;color:var(--warn)} .tag.bad{background:#fbe3e3;color:var(--bad)}
+.mut{color:var(--mut);font-size:12.5px}
+img.chart{max-width:100%;border:1px solid var(--line);border-radius:14px;background:#fff}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+a{color:var(--acc)}
+.src li{font-size:12.5px;word-break:break-all}
+.kpi{font-size:26px;font-weight:700;color:var(--acc)}
+/* ---- 默会卡片系统 ---- */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 15px;font-size:13px;cursor:pointer;color:var(--mut);transition:all .18s ease;user-select:none}
+.chip:hover{transform:translateY(-1px);border-color:var(--acc)}
+.chip.on{background:var(--deep);color:#fff;border-color:var(--deep)}
+.chip b{font-weight:700}
+.chip .n{opacity:.55;font-size:11.5px;margin-left:4px}
+.pref{display:inline-flex;align-items:center;gap:6px;background:#eef2f9;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:12.5px;margin:3px 4px 0 0;color:#4a5568}
+.pref .dot{width:7px;height:7px;border-radius:50%;background:#63e6be}
+.pref .dot.open{background:#f6d365}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.sgrid{grid-template-columns:1fr}}
+.scard{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;border-left:5px solid var(--acc);transition:all .2s ease;position:relative;animation:rise .5s ease both}
+.scard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,23,37,.10);border-color:#cdd6e4}
+@keyframes rise{from{transform:translateY(10px)}to{transform:none}}
+.scard.g{border-left-color:var(--good)} .scard.w{border-left-color:var(--amber)} .scard.b{border-left-color:#c8ccd2}
+.scard .nm{font-size:15.5px;font-weight:700;color:var(--deep)}
+.scard .tr{font-size:12px;color:var(--mut);margin-top:2px}
+.scard .score{position:absolute;top:14px;right:16px;font-size:24px;font-weight:800;color:var(--acc);line-height:1}
+.scard .score small{display:block;font-size:10px;color:var(--mut);font-weight:400;text-align:right}
+.scard .vd{margin-top:8px;font-size:12.5px}
+.scard .fee{margin-top:6px;font-size:12.5px;color:var(--mut)}
+.scard .dl{margin-top:5px;font-size:12px;font-weight:600;line-height:1.4}
+.scard .dl.hot{color:var(--warn)}
+.scard .dl.calm{color:var(--mut);font-weight:400}
+.bars{display:flex;gap:3px;margin-top:10px;height:6px}
+.bars i{flex:1;border-radius:3px;background:linear-gradient(90deg,var(--acc),#63b3ed);opacity:.85;display:block}
+.bars i.lo{background:#e2e8f0}
+.geo{margin-top:8px;font-size:11.5px;color:var(--mut);letter-spacing:2px}
+.geo b{color:var(--teal)}
+/* ---- 可打勾清单 ---- */
+.todo{list-style:none;padding-left:0}
+.todo li{display:flex;gap:9px;align-items:flex-start;font-size:14px}
+.todo input[type=checkbox]{margin-top:5px;width:16px;height:16px;flex:none;accent-color:var(--teal)}
+.todo li.done{opacity:.5;text-decoration:line-through}
+.lock{position:absolute;bottom:12px;right:14px;width:9px;height:9px;border-radius:50%;background:var(--amber);animation:breathe 2.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(214,158,46,.45)}50%{box-shadow:0 0 0 8px rgba(214,158,46,0)}}
+.xcard{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:8px 0;text-decoration:none;color:inherit;transition:all .18s}
+.xcard:hover{transform:translateX(4px);border-color:var(--acc)}
+.xcard .ar{color:var(--acc);font-size:17px}
+.dimbar{height:7px;border-radius:4px;background:#edf1f7;overflow:hidden;margin-top:2px}
+.dimbar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--teal),#63b3ed)}
+/* ---- 校徽与特点句 ---- */
+.shead{display:flex;gap:10px;align-items:center;padding-right:72px}
+.slogo{width:44px;height:44px;object-fit:contain;border-radius:10px;background:#fff;border:1px solid var(--line);flex:none;padding:3px}
+.slogo.big{width:56px;height:56px;padding:4px}
+.tagl{margin-top:8px;font-size:12.5px;color:var(--teal);font-weight:600;line-height:1.45}
+/* ---- 校园照片墙 ---- */
+.pwall{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pwall img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.pwall.n4 img:first-child{grid-column:span 2}
+@media(max-width:640px){.pwall{grid-template-columns:repeat(2,1fr)}.pwall.n4 img:first-child{grid-column:auto}}
+/* ---- iPhone/移动端适配：防溢出、横向可滚、字号收紧 ---- */
+@media(max-width:640px){
+  body{line-height:1.65}
+  .wrap{padding:14px 12px 56px}
+  header.top{padding:26px 12px 22px}
+  header.top h1{font-size:19px}
+  header.top .headline{font-size:14.5px;padding:10px 13px}
+  nav{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  .card{padding:14px 13px;margin:12px 0;border-radius:14px}
+  h2{font-size:15.5px}
+  table{font-size:12.5px}
+  th,td{padding:6px 7px;min-width:0}
+  th:first-child,td:first-child{min-width:4.5em}
+  .tscroll{margin:8px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+  .tscroll table{min-width:340px}
+  .tscroll.w4 table{min-width:540px}
+  .tscroll.w6 table{min-width:680px}
+  ul{padding-left:18px}
+  li{font-size:13.5px}
+  img{max-width:100%;height:auto}
+  .kpi{font-size:22px}
+  .scard{padding:14px 13px 12px}
+  .scard .nm{font-size:14.5px}
+  .scard .score{font-size:21px;top:12px;right:13px}
+  .shead{padding-right:60px}
+  .xcard{padding:12px 13px}
+  .xcard span{min-width:0}
+  .chips{gap:6px}
+  .chip{padding:6px 12px;font-size:12.5px}
+}
+</style></head><body>
+<header class="top"><div class="wrap"><h1>深圳过渡年 · 2027/28 幼儿园调研</h1>
+<p>麦兜（2024.9.30 生）· 2027年9月入园全局调研 v2（第一性原则重构）｜ 数据核验截至 2026-09-05</p><div class="headline">B 线过渡年：英语保温＋大 B 节奏对齐 ｜ 罗湖/福田动线优先 ｜ 费用口径多为媒体价、逐园待核</div></div></header>
+<nav><a href="index.html">← 总览</a></nav>
+<div class="wrap">
+<div class="card"><h2>📌 定位与背景（2026-10-20）</h2>
+<p>身份线暂定 B 线（永居子女 CoE，约 1 年）→ 麦兜 2027/28 学年在深圳过渡，2027.10 前后证件批出后到港，2028.9 正式入学香港。<b>过渡年的任务不是"上最好的园"，是"英语环境保温＋节奏不乱"</b>。</p>
+<p><b>班别定位（内地 8/31 划线）</b>：2027/28 小班收 2023.9.1–2024.8.31 出生——麦兜（2024.9.30）差 29 天，2027/28 只能读<b>托班/小小班</b>；2028/29 小班收 2024.9.1–2025.8.31——<b>他是该届最大端（大 B）</b>，与香港 8.31 线（思贝礼/HKA/SIS）同节奏。</p></div>
+
+<div class="card"><h2>🏫 候选园（罗湖/福田动线内优先）</h2>
+<p class="mut">⚠️ 费用多为 2020–2023 媒体口径，标"待核"的需电话/官网确认当年价目；排名不分先后。</p>
+<div class="tscroll w6"><table>
+<tr><th>园所</th><th>位置</th><th>体系/特色</th><th>费用口径</th><th>备注</th></tr>
+<tr><td><b>普林斯顿国际创科幼儿园</b></td><td>罗湖黄贝岭深业东岭</td><td>美式，外教多，体育特色</td><td>约 16,500/月（2020–22 媒体口径，待核）</td><td>离家最近的中高端选项；Toddler 班 12 人小班</td></tr>
+<tr><td><b>曦龙幼儿园</b></td><td>罗湖延芳路 588 号</td><td>AMI 蒙氏示范园，混龄</td><td>保教 5,000/月＋餐费 500（2022 口径，待核）</td><td>质价比路线；双语而非全英</td></tr>
+<tr><td><b>半岛金蕾幼儿园</b></td><td>罗湖</td><td>半岛蒙氏系，国际班外教全天带班</td><td>约 6 万/年档（2023 媒体口径，待核）</td><td>罗湖老牌蒙氏</td></tr>
+<tr><td><b>科发幼儿园</b></td><td>福田香蜜湖农林路 23 号</td><td>EYFS＋耶鲁载格勒体系，市一级</td><td>保教 24,600/月（2026 口径）</td><td>高端，费用接近香港国际校</td></tr>
+<tr><td><b>金生幼儿园</b></td><td>福田景田北五街 7 号</td><td>IB-PYP 双语沉浸</td><td>媒体口径约 9.8 万/学期（2022，待核，疑偏高）</td><td>IB 衔接概念好，费用需核</td></tr>
+<tr><td><b>方方乐趣中英文（幼儿部）</b></td><td>福田</td><td>港系双语（香港方方乐趣 2002 年创办）</td><td>K 段约 1.77 万/学期 ≈ 3.5 万/年（2022 口径，待核）</td><td><b>质价比突出</b>，港系背景与香港路线同宗</td></tr>
+<tr><td><b>英皇国际幼儿园</b></td><td>福田</td><td>双语，城堡式校舍</td><td>12,000/月（2020 口径，待核）</td><td>待核</td></tr>
+</table></div></div>
+
+<div class="card"><h2>🏰 高端国际园（南山/蛇口，仅列参考）</h2>
+<p>荟同（24.5–28.5 万/年）／爱文（28.8 万/年）／贝赛思福田校区（托班/PreK 约 23 万/年，2026 口径）／IPC（19.8 万/年）。<b>过渡年不建议追这一档</b>：费用等于香港正式校、通勤过远、且一年就走。</p></div>
+
+<div class="card"><h2>🚫 身份限制提醒</h2>
+<ul>
+<li>纯外籍人员子女学校（蛇口国际/科爱赛/深外国际部/南山 ISNS 等）<b>不招内地户籍</b>；麦兜 2027.10 后持单程证/香港证件能否按港澳台身份申请——届时再核，对过渡年无意义</li>
+<li>罗湖公办/普惠园（户籍可申请，保教费 840–1,600/月，2025.2 罗湖政府备案口径）：几乎免费但英语弱，与"英语保温"目标冲突——<b>列为兜底，不作主线</b></li>
+</ul></div>
+
+<div class="card"><h2>🎯 策略建议【分析】</h2>
+<ul>
+<li><b>过渡年主线</b>：罗湖/福田民办双语园（3–6 万/年档）＋家庭英语环境＋周末亲子英文活动，质价比优先；普林斯顿时创科校区（离家最近）和方方乐趣（港系双语）是首批电话核实对象</li>
+<li><b>节奏对齐</b>：2027 托班/小小班（深圳）→ 2028.9 香港小班/PreK/Nursery（大 B），与思贝礼/HKA/SIS 的 2028 线完美衔接</li>
+<li><b>插班口子</b>：2027.10 证件批出后若有香港 K1 空缺可中途插班（VEO/学之园/Box Hill 滚动有空位即问），但不强求</li>
+</ul></div>
+
+<div class="card"><h2>📋 待核清单</h2>
+<ul>
+<li>各园 2027/28 当年收费与托班/小小班设置（电话或官网）</li>
+<li>报名时间窗（深圳民办园通常滚动，热门园提前半年登记）</li>
+<li>普林斯顿时创科/曦龙/半岛金蕾/方方乐趣的外教配置与在园稳定性</li>
+</ul></div>
+</div></body></html>
